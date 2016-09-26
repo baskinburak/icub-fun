@@ -4,8 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/baskin/icub-friends/head_turn/class/ObjPosServer.cpp" "/home/baskin/icub-friends/head_turn/CMakeFiles/head_turn.dir/class/ObjPosServer.o"
   "/home/baskin/icub-friends/head_turn/head_turn.cpp" "/home/baskin/icub-friends/head_turn/CMakeFiles/head_turn.dir/head_turn.o"
+  "/home/baskin/icub-friends/class/ObjPosServer.cpp" "/home/baskin/icub-friends/head_turn/CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

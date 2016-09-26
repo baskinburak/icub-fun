@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/baskin/icub-friends/head_turn/class/ObjPosServer.h
+/home/baskin/icub-friends/class/ObjPosServer.cpp
+ObjPosServer.h
+/home/baskin/icub-friends/class/ObjPosServer.h
+sstream
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+
+/home/baskin/icub-friends/class/ObjPosServer.h
 yarp/os/all.h
 -
 yarp/sig/all.h
@@ -19,8 +35,8 @@ vector
 -
 
 /home/baskin/icub-friends/head_turn/head_turn.cpp
-class/ObjPosServer.h
-/home/baskin/icub-friends/head_turn/class/ObjPosServer.h
+../class/ObjPosServer.h
+/home/baskin/icub-friends/class/ObjPosServer.h
 vector
 -
 

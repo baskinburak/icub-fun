@@ -115,21 +115,6 @@ head_turn/fast:
 .PHONY : head_turn/fast
 
 # target to build an object file
-class/ObjPosServer.o:
-	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/class/ObjPosServer.o
-.PHONY : class/ObjPosServer.o
-
-# target to preprocess a source file
-class/ObjPosServer.i:
-	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/class/ObjPosServer.i
-.PHONY : class/ObjPosServer.i
-
-# target to generate assembly for a file
-class/ObjPosServer.s:
-	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/class/ObjPosServer.s
-.PHONY : class/ObjPosServer.s
-
-# target to build an object file
 head_turn.o:
 	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/head_turn.o
 .PHONY : head_turn.o
@@ -144,6 +129,21 @@ head_turn.s:
 	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/head_turn.s
 .PHONY : head_turn.s
 
+# target to build an object file
+home/baskin/icub-friends/class/ObjPosServer.o:
+	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o
+.PHONY : home/baskin/icub-friends/class/ObjPosServer.o
+
+# target to preprocess a source file
+home/baskin/icub-friends/class/ObjPosServer.i:
+	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.i
+.PHONY : home/baskin/icub-friends/class/ObjPosServer.i
+
+# target to generate assembly for a file
+home/baskin/icub-friends/class/ObjPosServer.s:
+	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.s
+.PHONY : home/baskin/icub-friends/class/ObjPosServer.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -153,12 +153,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... head_turn"
 	@echo "... rebuild_cache"
-	@echo "... class/ObjPosServer.o"
-	@echo "... class/ObjPosServer.i"
-	@echo "... class/ObjPosServer.s"
 	@echo "... head_turn.o"
 	@echo "... head_turn.i"
 	@echo "... head_turn.s"
+	@echo "... home/baskin/icub-friends/class/ObjPosServer.o"
+	@echo "... home/baskin/icub-friends/class/ObjPosServer.i"
+	@echo "... home/baskin/icub-friends/class/ObjPosServer.s"
 .PHONY : help
 
 

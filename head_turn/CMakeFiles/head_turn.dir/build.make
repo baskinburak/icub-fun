@@ -75,39 +75,39 @@ CMakeFiles/head_turn.dir/head_turn.o.provides: CMakeFiles/head_turn.dir/head_tur
 
 CMakeFiles/head_turn.dir/head_turn.o.provides.build: CMakeFiles/head_turn.dir/head_turn.o
 
-CMakeFiles/head_turn.dir/class/ObjPosServer.o: CMakeFiles/head_turn.dir/flags.make
-CMakeFiles/head_turn.dir/class/ObjPosServer.o: class/ObjPosServer.cpp
+CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o: CMakeFiles/head_turn.dir/flags.make
+CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o: /home/baskin/icub-friends/class/ObjPosServer.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/baskin/icub-friends/head_turn/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/head_turn.dir/class/ObjPosServer.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/head_turn.dir/class/ObjPosServer.o -c /home/baskin/icub-friends/head_turn/class/ObjPosServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o -c /home/baskin/icub-friends/class/ObjPosServer.cpp
 
-CMakeFiles/head_turn.dir/class/ObjPosServer.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/head_turn.dir/class/ObjPosServer.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/baskin/icub-friends/head_turn/class/ObjPosServer.cpp > CMakeFiles/head_turn.dir/class/ObjPosServer.i
+CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/baskin/icub-friends/class/ObjPosServer.cpp > CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.i
 
-CMakeFiles/head_turn.dir/class/ObjPosServer.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/head_turn.dir/class/ObjPosServer.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/baskin/icub-friends/head_turn/class/ObjPosServer.cpp -o CMakeFiles/head_turn.dir/class/ObjPosServer.s
+CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/baskin/icub-friends/class/ObjPosServer.cpp -o CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.s
 
-CMakeFiles/head_turn.dir/class/ObjPosServer.o.requires:
-.PHONY : CMakeFiles/head_turn.dir/class/ObjPosServer.o.requires
+CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o.requires:
+.PHONY : CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o.requires
 
-CMakeFiles/head_turn.dir/class/ObjPosServer.o.provides: CMakeFiles/head_turn.dir/class/ObjPosServer.o.requires
-	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/class/ObjPosServer.o.provides.build
-.PHONY : CMakeFiles/head_turn.dir/class/ObjPosServer.o.provides
+CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o.provides: CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o.requires
+	$(MAKE) -f CMakeFiles/head_turn.dir/build.make CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o.provides.build
+.PHONY : CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o.provides
 
-CMakeFiles/head_turn.dir/class/ObjPosServer.o.provides.build: CMakeFiles/head_turn.dir/class/ObjPosServer.o
+CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o.provides.build: CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o
 
 # Object files for target head_turn
 head_turn_OBJECTS = \
 "CMakeFiles/head_turn.dir/head_turn.o" \
-"CMakeFiles/head_turn.dir/class/ObjPosServer.o"
+"CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o"
 
 # External object files for target head_turn
 head_turn_EXTERNAL_OBJECTS =
 
 head_turn: CMakeFiles/head_turn.dir/head_turn.o
-head_turn: CMakeFiles/head_turn.dir/class/ObjPosServer.o
+head_turn: CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o
 head_turn: CMakeFiles/head_turn.dir/build.make
 head_turn: /usr/lib/x86_64-linux-gnu/libYARP_OS.so.2.3.66
 head_turn: /usr/lib/x86_64-linux-gnu/libYARP_sig.so.2.3.66
@@ -126,7 +126,7 @@ CMakeFiles/head_turn.dir/build: head_turn
 .PHONY : CMakeFiles/head_turn.dir/build
 
 CMakeFiles/head_turn.dir/requires: CMakeFiles/head_turn.dir/head_turn.o.requires
-CMakeFiles/head_turn.dir/requires: CMakeFiles/head_turn.dir/class/ObjPosServer.o.requires
+CMakeFiles/head_turn.dir/requires: CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o.requires
 .PHONY : CMakeFiles/head_turn.dir/requires
 
 CMakeFiles/head_turn.dir/clean:

@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/head_turn.dir/head_turn.o"
-  "CMakeFiles/head_turn.dir/class/ObjPosServer.o"
+  "CMakeFiles/head_turn.dir/home/baskin/icub-friends/class/ObjPosServer.o"
   "head_turn.pdb"
   "head_turn"
 )

@@ -1,4 +1,4 @@
-#include "class/ObjPosServer.h"
+#include "../class/ObjPosServer.h"
 #include <vector>
 
 using namespace std;
