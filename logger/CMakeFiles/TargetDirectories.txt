@@ -1,0 +1,1 @@
+/home/baskin/icub-friends/logger/CMakeFiles/logger.dir
