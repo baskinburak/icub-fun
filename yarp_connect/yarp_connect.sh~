@@ -1,0 +1,3 @@
+yarp connect /icub_kovan/head_motor_calculator/obj_head_motor_command /icub_kovan/action_selector/obj_head_motor_command;
+yarp connect /icub_kovan/head_motor_calculator/human_head_motor_command /icub_kovan/action_selector/human_head_motor_command;
+yarp connect /icub_kovan/cartesian_server/obj_arm_motor_command /icub_kovan/action_selector/obj_arm_motor_command

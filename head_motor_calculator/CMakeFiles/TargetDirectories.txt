@@ -1,0 +1,1 @@
+/home/baskin/icub-friends/head_motor_calculator/CMakeFiles/head_motor_calculator.dir
