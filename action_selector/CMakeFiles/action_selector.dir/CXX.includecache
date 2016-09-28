@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/baskin/icub-friends/action_selector/action_selector.cpp
+iostream
+-
+yarp/os/all.h
+-
+yarp/sig/all.h
+-
+yarp/dev/all.h
+-
+../class/YarpPortReader.h
+/home/baskin/icub-friends/class/YarpPortReader.h
+vector
+-
+../class/MotorController.h
+/home/baskin/icub-friends/class/MotorController.h
+
 /home/baskin/icub-friends/class/MotorController.cpp
 MotorController.h
 /home/baskin/icub-friends/class/MotorController.h
@@ -20,5 +36,17 @@ yarp/sig/all.h
 yarp/dev/all.h
 -
 vector
+-
+
+/home/baskin/icub-friends/class/YarpPortReader.h
+yarp/os/all.h
+-
+yarp/sig/all.h
+-
+yarp/dev/all.h
+-
+vector
+-
+string
 -
 

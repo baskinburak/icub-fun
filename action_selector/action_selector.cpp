@@ -10,7 +10,7 @@ int main() {
 	yarp::os::Network yarp;
 	YarpPortReader head_command("/icub_kovan/action_selector/human_head_motor_command");
 	YarpPortReader obj_command("/icub_kovan/action_selector/obj_head_motor_command");
-	YarpPortReader arm_command("/icub_kovan/cartesian_server/obj_arm_motor_command");
+	YarpPortReader arm_command("/icub_kovan/action_selector/obj_arm_motor_command");
 
 	bool icub_sim_on = false;
 

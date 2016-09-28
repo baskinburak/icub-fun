@@ -11,8 +11,9 @@ MotorController::MotorController(std::string robot_name, std::string robot_part,
 
 	(this->options).put("device", "remote_controlboard");
 	(this->options).put("robot", robot_name.c_str());
-	(this->options).put("local", "/icub_kovan/client");
 	std::string remote = std::string("/") + robot_name + std::string("/") + robot_part;
+	std::string local = (std::string("/icub_kovan/client") + remote);
+	(this->options).put("local", local.c_str());
 	(this->options).put("remote", remote.c_str());
 
 	this->driver = new yarp::dev::PolyDriver(this->options);
