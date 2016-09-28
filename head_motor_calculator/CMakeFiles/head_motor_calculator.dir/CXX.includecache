@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/baskin/icub-friends/class/ObjPosServer.h
+yarp/os/all.h
+-
+yarp/sig/all.h
+-
+yarp/dev/all.h
+-
+iostream
+-
+vector
+-
+
+/home/baskin/icub-friends/head_motor_calculator/head_motor_calculator.cpp
+../class/ObjPosServer.h
+/home/baskin/icub-friends/class/ObjPosServer.h
+vector
+-
+yarp/os/all.h
+-
+yarp/sig/all.h
+-
+yarp/dev/all.h
+-
+cmath
+-
+
