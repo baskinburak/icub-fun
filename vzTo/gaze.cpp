@@ -21,6 +21,10 @@ NewObjPosClient headOrObj("localhost",12348);
 ObjPosClient head("localhost",12345);
 ObjPosClient obj1("localhost",12344);
 ObjPosClient obj2("localhost",12343);
+ObjPosClient objToLogger("localhost",13000);
+ObjPosClient headToLogger("localhost",13001);
+NewObjPosClient headOrObjToLogger("localhost",13002);
+
 bool  which = false; //false -> head ,true -> obj
 bool isEqual(double a,double b){
 	if(fabs(a-b)>diff)
@@ -37,31 +41,55 @@ bool isZero(vector<double> holder){
 		return true;
 	return false;
 }
-void calcAverage(vector<double> &average,vector< vector<double> > &general,int divider){
-	average[0] = (general[1][0] + general[2][0])/divider;
-	average[1] = (general[1][1] + general[2][1])/divider;
-	average[2] = (general[1][2] + general[2][2])/divider;
+
+
+void calcAverage(vector<double> &average,vector< vector<double> > &general,int divider,bool isO,bool isS){
+	if(isO && isS) {
+		average[0] = (general[1][0] + general[2][0])/divider;
+		average[1] = (general[1][1] + general[2][1])/divider;
+		average[2] = (general[1][2] + general[2][2])/divider;
+	}
+	else {
+		if(isO) {
+			average[0] = general[1][0];
+			average[1] = general[1][1];
+			average[2] = general[1][2];
+		}
+		else {
+			average[0] = general[2][0];
+			average[1] = general[2][1];
+			average[2] = general[2][2];			
+		}
+	}
 }
+
+
+
+
 void updateVectors(vector<double> &icubToHat2,vector<double> &hat1ToHat2,vector< vector<double> > &general,vector<double> &icub,vector<double> &loneLedToHat2,vector<double> &loneLed){
 	int divider = 2;
+	bool isOneActive = true;
+	bool isSecondActive = true;
 	if(isZero(general[0])){
 		cout<<"need to see 2.15"<<endl;
 		return;
 	}
 	if(isZero(general[1])){
-		cout<<"2.4 is not active"<<endl;
+		cout<<"2.14 is not active"<<endl;
 		divider--;
+		isOneActive = false;
 	}
 	if(isZero(general[2])){
-		cout<<"2.3 is not active"<<endl;
+		cout<<"2.10 is not active"<<endl;
 		divider--;
+		isSecondActive = false;
 	}
 	if(divider == 0){
-		cout<<"need to see at least one of 2.3 or 2.4"<<endl;
+		cout<<"need to see at least one of 2.10 or 2.14"<<endl;
 		return;
 	}
 	vector<double > average(3);
-	calcAverage(average,general,divider);
+	calcAverage(average,general,divider,isOneActive,isSecondActive);
 	icubToHat2[0] = icub[0]-average[0];
 	icubToHat2[1] = icub[1]-average[1];
 	icubToHat2[2] = icub[2]-average[2];
@@ -91,8 +119,8 @@ int main(int argc, char *argv[]) {
 
 	yarp::os::Network yarp;
 	yarp::os::BufferedPort<yarp::os::Bottle>  outPort;
-	vector< vector<double> > general(3);//2.15,2.4,2.3
-	vector<double> icubToHat2(3); 	//hat2 is average of 2.4 and 2.3
+	vector< vector<double> > general(3);//2.15,2.14,2.10
+	vector<double> icubToHat2(3); 	//hat2 is average of 2.14 and 2.10
 	vector<double> hat1ToHat2(3);	// hat1 is 2.15
 	vector<double> icub; //x,y,z
 	vector<double> loneLed(3); //1.3
@@ -145,7 +173,7 @@ int main(int argc, char *argv[]) {
 		            if(tcm == 1 && ledid==3){
 		            	
 		            }
-		            else if(tcm != 2 || (ledid != 15 && ledid != 3 && ledid != 4)){
+		            else if(tcm != 2 || (ledid != 15 && ledid != 14 && ledid != 10)){
 		            	helper = 0;
 		            	jumper++;
 		            	j+=4;
@@ -178,14 +206,15 @@ int main(int argc, char *argv[]) {
 							general[0][1] = y;
 							general[0][2] = z;
 							head.sendData(x,y,z);
+							headToLogger.sendData(x,y,z);
 						}
 					}
-					else if(tcm == 2 && ledid == 4 && handled == false){
+					else if(tcm == 2 && ledid == 14 && handled == false){
 							general[1][0] = x;
 							general[1][1] = y;
 							general[1][2] = z;
 					}
-					else if(tcm == 2 && ledid == 3 && handled == false){
+					else if(tcm == 2 && ledid == 10 && handled == false){
 							general[2][0] = x;
 							general[2][1] = y;
 							general[2][2] = z;
@@ -197,6 +226,7 @@ int main(int argc, char *argv[]) {
 							loneLed[2] = z;
 							obj1.sendData(x,y,z);
 							obj2.sendData(x,y,z);
+							objToLogger.sendData(x,y,z);
 						}
 					}
 
@@ -219,11 +249,13 @@ int main(int argc, char *argv[]) {
         cout<<"degree1 " <<degree1 << " degree2 "<<degree2<<endl;
         usleep(1000*10);
         if(degree1>degree2 && !which){					// if degree1 is bigger hat is looking to obj
-        	headOrObj.sendHorO("obj");
+        	headOrObj.sendHorO((char *)"obj");
+        	headOrObjToLogger.sendHorO((char *)"obj");
         	which =true;
        	}
         else if(degree2>=degree1 && which){
-        	headOrObj.sendHorO("head");
+        	headOrObj.sendHorO((char *)"head");
+        	headOrObjToLogger.sendHorO((char *)"head");
         	which =false;
         }
     }
