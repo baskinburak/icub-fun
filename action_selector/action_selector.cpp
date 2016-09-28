@@ -5,7 +5,6 @@
 #include "../class/YarpPortReader.h"
 #include <vector>
 #include "../class/MotorController.h"
-#include "../class/ObjPosClient.h"
 
 int main() {
 	yarp::os::Network yarp;
@@ -43,8 +42,6 @@ int main() {
 	}
 
 	while(true) {
-		ObjPosClient a("localhost",24242);
-		a.sendData(1,2,3);
 		std::vector<double> head_mc = head_command.getData();
 		std::vector<double> obj_mc = obj_command.getData();
 		std::vector<double> arm_mc = arm_command.getData();
