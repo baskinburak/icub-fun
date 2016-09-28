@@ -145,6 +145,21 @@ home/baskin/icub-friends/class/MotorController.s:
 .PHONY : home/baskin/icub-friends/class/MotorController.s
 
 # target to build an object file
+home/baskin/icub-friends/class/ObjPosClient.o:
+	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o
+.PHONY : home/baskin/icub-friends/class/ObjPosClient.o
+
+# target to preprocess a source file
+home/baskin/icub-friends/class/ObjPosClient.i:
+	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.i
+.PHONY : home/baskin/icub-friends/class/ObjPosClient.i
+
+# target to generate assembly for a file
+home/baskin/icub-friends/class/ObjPosClient.s:
+	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.s
+.PHONY : home/baskin/icub-friends/class/ObjPosClient.s
+
+# target to build an object file
 home/baskin/icub-friends/class/YarpPortReader.o:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/YarpPortReader.o
 .PHONY : home/baskin/icub-friends/class/YarpPortReader.o
@@ -174,6 +189,9 @@ help:
 	@echo "... home/baskin/icub-friends/class/MotorController.o"
 	@echo "... home/baskin/icub-friends/class/MotorController.i"
 	@echo "... home/baskin/icub-friends/class/MotorController.s"
+	@echo "... home/baskin/icub-friends/class/ObjPosClient.o"
+	@echo "... home/baskin/icub-friends/class/ObjPosClient.i"
+	@echo "... home/baskin/icub-friends/class/ObjPosClient.s"
 	@echo "... home/baskin/icub-friends/class/YarpPortReader.o"
 	@echo "... home/baskin/icub-friends/class/YarpPortReader.i"
 	@echo "... home/baskin/icub-friends/class/YarpPortReader.s"

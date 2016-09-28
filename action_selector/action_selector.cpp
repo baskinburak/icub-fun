@@ -5,6 +5,7 @@
 #include "../class/YarpPortReader.h"
 #include <vector>
 #include "../class/MotorController.h"
+#include "../class/ObjPosClient.h"
 
 int main() {
 	yarp::os::Network yarp;
@@ -25,6 +26,7 @@ int main() {
 		icub_sim_on = true;
 		std::cout << "[SCC] Connected to icubSim" << std::endl;
 	} catch (std::string e) {
+		std::cout << "[ERR] Connecting to icubSim failed" << std::endl;
 		std::cout << e << std::endl;
 	}
 
@@ -36,16 +38,21 @@ int main() {
 		icub_on = true;
 		std::cout << "[SCC] Connected to icub" << std::endl;
 	} catch(std::string e) {
+		std::cout << "[ERR] Connecting to icub failed" << std::endl;
 		std::cout << e << std::endl;
 	}
 
 	while(true) {
+		ObjPosClient a("localhost",24242);
+		a.sendData(1,2,3);
 		std::vector<double> head_mc = head_command.getData();
 		std::vector<double> obj_mc = obj_command.getData();
 		std::vector<double> arm_mc = arm_command.getData();
 
+
 		int action;
 		std::cout << "select action (1 - move arm, 2 - look at object, 3 - look at human head)" << std::endl;
+		std::cin >> action;
 
 		switch(action) {
 			case 1:

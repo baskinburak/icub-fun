@@ -6,6 +6,7 @@
 
 class YarpPortReader {
 	private:
+		std::vector<double> prev_data;
 		yarp::os::BufferedPort<yarp::os::Bottle> port;
 	public:
 		YarpPortReader(std::string portname);

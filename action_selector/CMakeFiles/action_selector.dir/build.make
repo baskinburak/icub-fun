@@ -121,11 +121,35 @@ CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o.
 
 CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o.provides.build: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o
 
+CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o: CMakeFiles/action_selector.dir/flags.make
+CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o: /home/baskin/icub-friends/class/ObjPosClient.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/baskin/icub-friends/action_selector/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o -c /home/baskin/icub-friends/class/ObjPosClient.cpp
+
+CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/baskin/icub-friends/class/ObjPosClient.cpp > CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.i
+
+CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/baskin/icub-friends/class/ObjPosClient.cpp -o CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.s
+
+CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o.requires:
+.PHONY : CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o.requires
+
+CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o.provides: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o.requires
+	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o.provides.build
+.PHONY : CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o.provides
+
+CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o.provides.build: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o
+
 # Object files for target action_selector
 action_selector_OBJECTS = \
 "CMakeFiles/action_selector.dir/action_selector.o" \
 "CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/YarpPortReader.o" \
-"CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o"
+"CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o" \
+"CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o"
 
 # External object files for target action_selector
 action_selector_EXTERNAL_OBJECTS =
@@ -133,6 +157,7 @@ action_selector_EXTERNAL_OBJECTS =
 action_selector: CMakeFiles/action_selector.dir/action_selector.o
 action_selector: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/YarpPortReader.o
 action_selector: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o
+action_selector: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o
 action_selector: CMakeFiles/action_selector.dir/build.make
 action_selector: /usr/lib/x86_64-linux-gnu/libYARP_OS.so.2.3.66
 action_selector: /usr/lib/x86_64-linux-gnu/libYARP_sig.so.2.3.66
@@ -153,6 +178,7 @@ CMakeFiles/action_selector.dir/build: action_selector
 CMakeFiles/action_selector.dir/requires: CMakeFiles/action_selector.dir/action_selector.o.requires
 CMakeFiles/action_selector.dir/requires: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/YarpPortReader.o.requires
 CMakeFiles/action_selector.dir/requires: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o.requires
+CMakeFiles/action_selector.dir/requires: CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o.requires
 .PHONY : CMakeFiles/action_selector.dir/requires
 
 CMakeFiles/action_selector.dir/clean:

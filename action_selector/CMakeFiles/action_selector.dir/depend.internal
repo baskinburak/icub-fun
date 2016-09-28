@@ -4,10 +4,14 @@
 CMakeFiles/action_selector.dir/action_selector.o
  /home/baskin/icub-friends/action_selector/action_selector.cpp
  /home/baskin/icub-friends/class/MotorController.h
+ /home/baskin/icub-friends/class/ObjPosClient.h
  /home/baskin/icub-friends/class/YarpPortReader.h
 CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o
  /home/baskin/icub-friends/class/MotorController.cpp
  /home/baskin/icub-friends/class/MotorController.h
+CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o
+ /home/baskin/icub-friends/class/ObjPosClient.cpp
+ /home/baskin/icub-friends/class/ObjPosClient.h
 CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/YarpPortReader.o
  /home/baskin/icub-friends/class/YarpPortReader.cpp
  /home/baskin/icub-friends/class/YarpPortReader.h

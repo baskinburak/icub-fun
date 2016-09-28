@@ -6,6 +6,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/baskin/icub-friends/action_selector/action_selector.cpp" "/home/baskin/icub-friends/action_selector/CMakeFiles/action_selector.dir/action_selector.o"
   "/home/baskin/icub-friends/class/MotorController.cpp" "/home/baskin/icub-friends/action_selector/CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/MotorController.o"
+  "/home/baskin/icub-friends/class/ObjPosClient.cpp" "/home/baskin/icub-friends/action_selector/CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/ObjPosClient.o"
   "/home/baskin/icub-friends/class/YarpPortReader.cpp" "/home/baskin/icub-friends/action_selector/CMakeFiles/action_selector.dir/home/baskin/icub-friends/class/YarpPortReader.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
