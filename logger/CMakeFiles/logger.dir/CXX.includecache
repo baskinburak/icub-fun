@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/baskin/icub-friends/logger/logger.cpp
+/home/fatih/Desktop/icub-pusher/logger/logger.cpp
 yarp/os/all.h
 -
 yarp/sig/all.h

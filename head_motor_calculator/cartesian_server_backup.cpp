@@ -100,25 +100,38 @@ int main()
 	Matrix R=Rz*Ry;                            // compose the two rotations keeping the order
 	Vector od=yarp::math::dcm2axis(R);          // from rotation matrix back to the axis/angle notation
 	
-	
-	//phase1 
-	Vector xd(3),xdhat,odhat;
-	xd[0]=0;
-	xd[1]=0.4;
-	xd[2]=0;
-	icart->goToPose(xd,oy,1.0);
-	icart->askForPose(xd,od,xdhat,odhat,conf);
-	for(int i =0;i<conf.size();i++)
-		cout<<conf[i] << " ";
-	cout<< endl;
-	Vector resx,reso;
-	sleep(1);
-	icart->getPose(resx,reso,NULL);
-	cout<< "phase1 done" << endl;
-	cout << "Resulting pos x: "<< resx[0] << "  y: " << resx[1] << "  z: " << resx[2] << endl;
-	char inp;
-	cin>>inp;
+	while(1){
+		sleep(1);
+	    coordinates=obj_server.getObjCoordinates();
+	    inpx=coordinates[0];
+	    inpy=coordinates[1];
+	    inpz=coordinates[2];
+	    if(1){//checkbound(inpx,inpy,inpz)){
+	    	cout<< "Coordinate inbound! Proceeding to action!" << endl;
+	        Vector xd(3),xdhat,odhat;
+	        xd[0]=-inpx-0.055;
+	        xd[1]=-inpy;
+	        xd[2]=inpz+0.36;
+	        //cout << "x: "<< xd[0] << "  y: " << xd[1] << "  z: " << xd[2] << endl;
+	        icart->askForPose(xd,od,xdhat,odhat,conf);
+	       // cout << "sizeeeeeeeeeeeeeeee "<< conf.size() << endl;
+	        icart->goToPose(xd,od,0.0);
+	        Vector resxd,resod;
+	        icart->getPose(resxd,resod,NULL);
+	        cout << "Resulting pos x: "<< resxd[0] << "  y: " << resxd[1] << "  z: " << resxd[2] << endl;
+	    }
+	    else{
+	    	cout<< "Invalid coordinate received(out of bounds)!"<<endl;
+	    }
+	    	
+        yarp::os::Bottle& obj_bottle = obj_port.prepare();
+        obj_bottle.clear();
+	    for(int i=0; i<jnts; i++) {
+		    obj_bottle.addDouble(conf[i]);
+	    }
+	    obj_port.write();
+		
+	}
    	clientCartCtrl.close();
    	return 0;
 }
-

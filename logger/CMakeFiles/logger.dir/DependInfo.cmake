@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/baskin/icub-friends/logger/logger.cpp" "/home/baskin/icub-friends/logger/CMakeFiles/logger.dir/logger.o"
+  "/home/fatih/Desktop/icub-pusher/logger/logger.cpp" "/home/fatih/Desktop/icub-pusher/logger/CMakeFiles/logger.dir/logger.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
