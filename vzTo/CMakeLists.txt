@@ -13,7 +13,7 @@ add_executable(vzOneLed vzOneLed.cpp)
 add_executable(gazeCalculate gazeCalculate.cpp)
 add_executable(sync sync.cpp)
 add_executable(vzMultiLed vzMultiLed.cpp)
-add_executable(gaze gaze.cpp ../class/ObjPosClient.cpp)
+add_executable(gaze gaze.cpp ../class/NewObjPosClient.cpp ../class/ObjPosClient.cpp)
 # link with YARP libraries
 target_link_libraries(vzOneLed ${YARP_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(sync ${YARP_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})

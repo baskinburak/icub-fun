@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tarik/vzTo/icub-pusher/vzTo
+CMAKE_SOURCE_DIR = /home/tarik/icub-pusher/vzTo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tarik/vzTo/icub-pusher/vzTo/build
+CMAKE_BINARY_DIR = /home/tarik/icub-pusher/vzTo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles /home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/icub-pusher/vzTo/build/CMakeFiles /home/tarik/icub-pusher/vzTo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/icub-pusher/vzTo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -229,32 +229,59 @@ gazeCalculate.cpp.s:
 	$(MAKE) -f CMakeFiles/gazeCalculate.dir/build.make CMakeFiles/gazeCalculate.dir/gazeCalculate.cpp.s
 .PHONY : gazeCalculate.cpp.s
 
-home/tarik/vzTo/icub-pusher/class/ObjPosClient.o: home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o
+home/tarik/icub-pusher/class/NewObjPosClient.o: home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
 
-.PHONY : home/tarik/vzTo/icub-pusher/class/ObjPosClient.o
+.PHONY : home/tarik/icub-pusher/class/NewObjPosClient.o
 
 # target to build an object file
-home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o:
-	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o
-.PHONY : home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o
+home/tarik/icub-pusher/class/NewObjPosClient.cpp.o:
+	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
+.PHONY : home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
 
-home/tarik/vzTo/icub-pusher/class/ObjPosClient.i: home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.i
+home/tarik/icub-pusher/class/NewObjPosClient.i: home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
 
-.PHONY : home/tarik/vzTo/icub-pusher/class/ObjPosClient.i
+.PHONY : home/tarik/icub-pusher/class/NewObjPosClient.i
 
 # target to preprocess a source file
-home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.i:
-	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.i
-.PHONY : home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.i
+home/tarik/icub-pusher/class/NewObjPosClient.cpp.i:
+	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
+.PHONY : home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
 
-home/tarik/vzTo/icub-pusher/class/ObjPosClient.s: home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.s
+home/tarik/icub-pusher/class/NewObjPosClient.s: home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
 
-.PHONY : home/tarik/vzTo/icub-pusher/class/ObjPosClient.s
+.PHONY : home/tarik/icub-pusher/class/NewObjPosClient.s
 
 # target to generate assembly for a file
-home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.s:
-	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.s
-.PHONY : home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.s
+home/tarik/icub-pusher/class/NewObjPosClient.cpp.s:
+	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
+.PHONY : home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
+
+home/tarik/icub-pusher/class/ObjPosClient.o: home/tarik/icub-pusher/class/ObjPosClient.cpp.o
+
+.PHONY : home/tarik/icub-pusher/class/ObjPosClient.o
+
+# target to build an object file
+home/tarik/icub-pusher/class/ObjPosClient.cpp.o:
+	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o
+.PHONY : home/tarik/icub-pusher/class/ObjPosClient.cpp.o
+
+home/tarik/icub-pusher/class/ObjPosClient.i: home/tarik/icub-pusher/class/ObjPosClient.cpp.i
+
+.PHONY : home/tarik/icub-pusher/class/ObjPosClient.i
+
+# target to preprocess a source file
+home/tarik/icub-pusher/class/ObjPosClient.cpp.i:
+	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.i
+.PHONY : home/tarik/icub-pusher/class/ObjPosClient.cpp.i
+
+home/tarik/icub-pusher/class/ObjPosClient.s: home/tarik/icub-pusher/class/ObjPosClient.cpp.s
+
+.PHONY : home/tarik/icub-pusher/class/ObjPosClient.s
+
+# target to generate assembly for a file
+home/tarik/icub-pusher/class/ObjPosClient.cpp.s:
+	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.s
+.PHONY : home/tarik/icub-pusher/class/ObjPosClient.cpp.s
 
 sync.o: sync.cpp.o
 
@@ -356,9 +383,12 @@ help:
 	@echo "... gazeCalculate.o"
 	@echo "... gazeCalculate.i"
 	@echo "... gazeCalculate.s"
-	@echo "... home/tarik/vzTo/icub-pusher/class/ObjPosClient.o"
-	@echo "... home/tarik/vzTo/icub-pusher/class/ObjPosClient.i"
-	@echo "... home/tarik/vzTo/icub-pusher/class/ObjPosClient.s"
+	@echo "... home/tarik/icub-pusher/class/NewObjPosClient.o"
+	@echo "... home/tarik/icub-pusher/class/NewObjPosClient.i"
+	@echo "... home/tarik/icub-pusher/class/NewObjPosClient.s"
+	@echo "... home/tarik/icub-pusher/class/ObjPosClient.o"
+	@echo "... home/tarik/icub-pusher/class/ObjPosClient.i"
+	@echo "... home/tarik/icub-pusher/class/ObjPosClient.s"
 	@echo "... sync.o"
 	@echo "... sync.i"
 	@echo "... sync.s"

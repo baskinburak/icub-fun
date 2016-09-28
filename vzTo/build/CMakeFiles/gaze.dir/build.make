@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tarik/vzTo/icub-pusher/vzTo
+CMAKE_SOURCE_DIR = /home/tarik/icub-pusher/vzTo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tarik/vzTo/icub-pusher/vzTo/build
+CMAKE_BINARY_DIR = /home/tarik/icub-pusher/vzTo/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gaze.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/gaze.dir/flags.make
 
 CMakeFiles/gaze.dir/gaze.cpp.o: CMakeFiles/gaze.dir/flags.make
 CMakeFiles/gaze.dir/gaze.cpp.o: ../gaze.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gaze.dir/gaze.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaze.dir/gaze.cpp.o -c /home/tarik/vzTo/icub-pusher/vzTo/gaze.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/icub-pusher/vzTo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gaze.dir/gaze.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaze.dir/gaze.cpp.o -c /home/tarik/icub-pusher/vzTo/gaze.cpp
 
 CMakeFiles/gaze.dir/gaze.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gaze.dir/gaze.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/vzTo/icub-pusher/vzTo/gaze.cpp > CMakeFiles/gaze.dir/gaze.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/icub-pusher/vzTo/gaze.cpp > CMakeFiles/gaze.dir/gaze.cpp.i
 
 CMakeFiles/gaze.dir/gaze.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gaze.dir/gaze.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/vzTo/icub-pusher/vzTo/gaze.cpp -o CMakeFiles/gaze.dir/gaze.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/icub-pusher/vzTo/gaze.cpp -o CMakeFiles/gaze.dir/gaze.cpp.s
 
 CMakeFiles/gaze.dir/gaze.cpp.o.requires:
 
@@ -81,40 +81,66 @@ CMakeFiles/gaze.dir/gaze.cpp.o.provides: CMakeFiles/gaze.dir/gaze.cpp.o.requires
 CMakeFiles/gaze.dir/gaze.cpp.o.provides.build: CMakeFiles/gaze.dir/gaze.cpp.o
 
 
-CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o: CMakeFiles/gaze.dir/flags.make
-CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o: /home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o -c /home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o: CMakeFiles/gaze.dir/flags.make
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o: /home/tarik/icub-pusher/class/NewObjPosClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/icub-pusher/vzTo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o -c /home/tarik/icub-pusher/class/NewObjPosClient.cpp
 
-CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp > CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.i
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/icub-pusher/class/NewObjPosClient.cpp > CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
 
-CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp -o CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.s
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/icub-pusher/class/NewObjPosClient.cpp -o CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
 
-CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o.requires:
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o.requires:
 
-.PHONY : CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o.requires
+.PHONY : CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o.requires
 
-CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o.provides: CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o.requires
-	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o.provides.build
-.PHONY : CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o.provides
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o.provides: CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o.provides.build
+.PHONY : CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o.provides
 
-CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o.provides.build: CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o.provides.build: CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
+
+
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o: CMakeFiles/gaze.dir/flags.make
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o: /home/tarik/icub-pusher/class/ObjPosClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/icub-pusher/vzTo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o -c /home/tarik/icub-pusher/class/ObjPosClient.cpp
+
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/icub-pusher/class/ObjPosClient.cpp > CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.i
+
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/icub-pusher/class/ObjPosClient.cpp -o CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.s
+
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o.requires:
+
+.PHONY : CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o.requires
+
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o.provides: CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o.provides.build
+.PHONY : CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o.provides
+
+CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o.provides.build: CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o
 
 
 # Object files for target gaze
 gaze_OBJECTS = \
 "CMakeFiles/gaze.dir/gaze.cpp.o" \
-"CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o"
+"CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o" \
+"CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o"
 
 # External object files for target gaze
 gaze_EXTERNAL_OBJECTS =
 
 gaze: CMakeFiles/gaze.dir/gaze.cpp.o
-gaze: CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o
+gaze: CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
+gaze: CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o
 gaze: CMakeFiles/gaze.dir/build.make
 gaze: /usr/local/lib/libYARP_math.so.2.3.66
 gaze: /usr/local/lib/libYARP_dev.so.2.3.66
@@ -123,7 +149,7 @@ gaze: /usr/local/lib/libYARP_name.so.2.3.66
 gaze: /usr/local/lib/libYARP_sig.so.2.3.66
 gaze: /usr/local/lib/libYARP_OS.so.2.3.66
 gaze: CMakeFiles/gaze.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable gaze"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/icub-pusher/vzTo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable gaze"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gaze.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -132,7 +158,8 @@ CMakeFiles/gaze.dir/build: gaze
 .PHONY : CMakeFiles/gaze.dir/build
 
 CMakeFiles/gaze.dir/requires: CMakeFiles/gaze.dir/gaze.cpp.o.requires
-CMakeFiles/gaze.dir/requires: CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o.requires
+CMakeFiles/gaze.dir/requires: CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o.requires
+CMakeFiles/gaze.dir/requires: CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o.requires
 
 .PHONY : CMakeFiles/gaze.dir/requires
 
@@ -141,6 +168,6 @@ CMakeFiles/gaze.dir/clean:
 .PHONY : CMakeFiles/gaze.dir/clean
 
 CMakeFiles/gaze.dir/depend:
-	cd /home/tarik/vzTo/icub-pusher/vzTo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/vzTo/icub-pusher/vzTo /home/tarik/vzTo/icub-pusher/vzTo /home/tarik/vzTo/icub-pusher/vzTo/build /home/tarik/vzTo/icub-pusher/vzTo/build /home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles/gaze.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/icub-pusher/vzTo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/icub-pusher/vzTo /home/tarik/icub-pusher/vzTo /home/tarik/icub-pusher/vzTo/build /home/tarik/icub-pusher/vzTo/build /home/tarik/icub-pusher/vzTo/build/CMakeFiles/gaze.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gaze.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/tarik/vzTo/icub-pusher/vzTo
+# Install script for directory: /home/tarik/icub-pusher/vzTo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tarik/vzTo/icub-pusher/vzTo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tarik/icub-pusher/vzTo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

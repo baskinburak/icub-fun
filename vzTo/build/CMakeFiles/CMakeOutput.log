@@ -636,3 +636,31 @@ Linking C executable cmTC_94c03
 make[1]: Leaving directory '/home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles/CMakeTmp'
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/tarik/icub-pusher/vzTo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_726b4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_726b4.dir/build.make CMakeFiles/cmTC_726b4.dir/build
+make[1]: Entering directory '/home/tarik/icub-pusher/vzTo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_726b4.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_726b4.dir/CheckIncludeFile.c.o   -c /home/tarik/icub-pusher/vzTo/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_726b4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_726b4.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_726b4.dir/CheckIncludeFile.c.o  -o cmTC_726b4 -rdynamic 
+make[1]: Leaving directory '/home/tarik/icub-pusher/vzTo/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/tarik/icub-pusher/vzTo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3e5f6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3e5f6.dir/build.make CMakeFiles/cmTC_3e5f6.dir/build
+make[1]: Entering directory '/home/tarik/icub-pusher/vzTo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3e5f6.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3e5f6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3e5f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e5f6.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3e5f6.dir/CheckFunctionExists.c.o  -o cmTC_3e5f6 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/tarik/icub-pusher/vzTo/build/CMakeFiles/CMakeTmp'
+
+

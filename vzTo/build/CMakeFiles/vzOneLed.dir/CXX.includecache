@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tarik/vzTo/icub-pusher/vzTo/vzOneLed.cpp
+/home/tarik/icub-pusher/vzTo/vzOneLed.cpp
 yarp/os/all.h
 -
 stdio.h

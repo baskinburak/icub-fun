@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp
-ObjPosClient.h
-/home/tarik/vzTo/icub-pusher/class/ObjPosClient.h
+/home/tarik/icub-pusher/class/NewObjPosClient.cpp
+NewObjPosClient.h
+/home/tarik/icub-pusher/class/NewObjPosClient.h
 unistd.h
 -
 string.h
@@ -24,7 +24,7 @@ netdb.h
 sstream
 -
 
-/home/tarik/vzTo/icub-pusher/class/ObjPosClient.h
+/home/tarik/icub-pusher/class/NewObjPosClient.h
 yarp/os/all.h
 -
 yarp/sig/all.h
@@ -34,11 +34,41 @@ yarp/dev/all.h
 string
 -
 
-/home/tarik/vzTo/icub-pusher/vzTo/gaze.cpp
+/home/tarik/icub-pusher/class/ObjPosClient.cpp
+ObjPosClient.h
+/home/tarik/icub-pusher/class/ObjPosClient.h
+unistd.h
+-
+string.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+sstream
+-
+
+/home/tarik/icub-pusher/class/ObjPosClient.h
+yarp/os/all.h
+-
+yarp/sig/all.h
+-
+yarp/dev/all.h
+-
+string
+-
+
+/home/tarik/icub-pusher/vzTo/gaze.cpp
 yarp/os/all.h
 -
 ../class/ObjPosClient.h
-/home/tarik/vzTo/icub-pusher/class/ObjPosClient.h
+/home/tarik/icub-pusher/class/ObjPosClient.h
+../class/NewObjPosClient.h
+/home/tarik/icub-pusher/class/NewObjPosClient.h
 stdio.h
 -
 stdlib.h

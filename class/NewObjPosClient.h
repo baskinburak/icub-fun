@@ -4,13 +4,13 @@
 #include <string>
 
 
-class ObjPosClient {
+class NewObjPosClient {
 	private:
 		std::string host;
 		int portno;
 	public:
-		ObjPosClient(std::string host, int portno);
-		ObjPosClient(const char* host, int portno);
+		NewObjPosClient(std::string host, int portno);
+		NewObjPosClient(const char* host, int portno);
 		void sendData(double x, double y, double z);
-		void sendHorO(double x, double y, double z);
+		void sendHorO(char* HeadOrObj);
 };

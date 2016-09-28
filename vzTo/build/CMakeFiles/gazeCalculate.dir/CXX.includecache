@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tarik/vzTo/icub-pusher/vzTo/gazeCalculate.cpp
+/home/tarik/icub-pusher/vzTo/gazeCalculate.cpp
 yarp/os/all.h
 -
 stdio.h

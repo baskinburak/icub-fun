@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gaze.dir/gaze.cpp.o"
-  "CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o"
+  "CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o"
+  "CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o"
   "gaze.pdb"
   "gaze"
 )

@@ -1,5 +1,6 @@
 #include <yarp/os/all.h>
 #include "../class/ObjPosClient.h"
+#include "../class/NewObjPosClient.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -14,16 +15,22 @@
 #include <vector>
 #include <math.h>
 #define diff 0.00001 
-
+#define change 0.1
 using namespace std;
-ObjPosClient god("localhost",12348);
-pthread_mutex_t mutex_coords;
-double glo_x, glo_y, glo_z;
-bool  which = true;
+NewObjPosClient headOrObj("localhost",12348);
+ObjPosClient head("localhost",12345);
+ObjPosClient obj1("localhost",12344);
+ObjPosClient obj2("localhost",12343);
+bool  which = false; //false -> head ,true -> obj
 bool isEqual(double a,double b){
 	if(fabs(a-b)>diff)
 		return false;
 	return true;
+}
+bool isChanged(double a,double b){
+	if(fabs(a-b)>change)
+		return true;
+	return false;
 }
 bool isZero(vector<double> holder){
 	if(isEqual(holder[0],0.0) && isEqual(holder[1],0.0) && isEqual(holder[2],0.0))
@@ -79,16 +86,9 @@ double dotProduct(vector<double> &v1,vector<double> &v2){
 
 
 int main(int argc, char *argv[]) {
-/*   	pthread_mutex_init(&mutex_coords, NULL);
-	pthread_t socket_thread;
-	pthread_create(&socket_thread, NULL, send_data, NULL);
-	if(argc<3){
-		cout<<"have to enter tcm and led"<<endl;
-		return 1;
-	}
 
-	int d_tcm = atoi(argv[1]);
-	int d_led = atoi(argv[2]);*/
+
+
 	yarp::os::Network yarp;
 	yarp::os::BufferedPort<yarp::os::Bottle>  outPort;
 	vector< vector<double> > general(3);//2.15,2.4,2.3
@@ -119,7 +119,9 @@ int main(int argc, char *argv[]) {
 	return 1;
 	}
 	yarp.connect("/vzPout",outPort.getName());
+	
 	while (true) {
+	        usleep(1000*10);
         yarp::os::Bottle *input =outPort.read();
         if (input!=NULL) {
             yarp::os::Bottle& output = outPort.prepare();
@@ -130,7 +132,7 @@ int main(int argc, char *argv[]) {
             int tcm,ledid;
 	        int helper = 0;
 	        int jumper = 0;
-	        bool zero = false;
+	        bool handled = false;
             for(int j = 1;j<input->size();j++){
             	if(helper == 0)
             	{
@@ -153,58 +155,60 @@ int main(int argc, char *argv[]) {
 		            
 		            //cout<<"tcm "<<tcm<<" ledid "<<ledid<<" ";
             	}
-            	else if(helper == 4)
-            	{
+				else if(helper == 4)
+				{
 
-            		helper = 0;
-            		jumper++;
-            		x = output.get(0).asDouble();
-            		y = output.get(1).asDouble();
-            		z = output.get(2).asDouble();
-            		if(isEqual(x,0.0) && isEqual(y,0.0) && isEqual(z,0.0)){
-            			zero = true;
-            		}
-            		else{
-		        		x = x+3.059691;
+					helper = 0;
+					jumper++;
+					x = output.get(0).asDouble();
+					y = output.get(1).asDouble();
+					z = output.get(2).asDouble();
+					if(isEqual(x,0.0) && isEqual(y,0.0) && isEqual(z,0.0)){
+						handled = true;
+					}
+					else{
+						x = x+3.059691;
 						y = y-0.552323; 
 						z = z-9.433398;
 					}
-					if(tcm == 2 && ledid == 15){
-						//if(zero == false){
+					if(tcm == 2 && ledid == 15 && handled == false){
+		
+						if(isChanged(general[0][0],x) || isChanged(general[0][1],y) || isChanged(general[0][2],z)){
 							general[0][0] = x;
 							general[0][1] = y;
 							general[0][2] = z;
-						//}
+							head.sendData(x,y,z);
+						}
 					}
-					else if(tcm == 2 && ledid == 4){
-					//	if(zero == false){
+					else if(tcm == 2 && ledid == 4 && handled == false){
 							general[1][0] = x;
 							general[1][1] = y;
 							general[1][2] = z;
-						//}
 					}
-					else if(tcm == 2 && ledid == 3){
-					//	if(zero == false){
+					else if(tcm == 2 && ledid == 3 && handled == false){
 							general[2][0] = x;
 							general[2][1] = y;
 							general[2][2] = z;
-						//}
 					}
-					else if(tcm == 1 && ledid == 3){
-						loneLed[0] = x;
-						loneLed[1] = y;
-						loneLed[2] = z;
+					else if(tcm == 1 && ledid == 3 && handled == false){
+						if(isChanged(loneLed[0],x) || isChanged(loneLed[1],y) || isChanged(loneLed[2],z)){
+							loneLed[0] = x;
+							loneLed[1] = y;
+							loneLed[2] = z;
+							obj1.sendData(x,y,z);
+							obj2.sendData(x,y,z);
+						}
 					}
 
-					zero= false;
+					handled= false;
 					output.clear();
-            	}
-		        else{
-		        	current = input->get((jumper*5)+helper+1).asDouble();
-		           	output.addDouble(current);
-		           	helper++;
-		        }
-		        outPort.write();
+				}
+				else{
+					current = input->get((jumper*5)+helper+1).asDouble();
+				   	output.addDouble(current);
+				   	helper++;
+				}
+				outPort.write();
 
            }
 
@@ -213,14 +217,14 @@ int main(int argc, char *argv[]) {
         degree1 = dotProduct(icubToHat2,hat1ToHat2);
         degree2 = dotProduct(loneLedToHat2,hat1ToHat2);
         cout<<"degree1 " <<degree1 << " degree2 "<<degree2<<endl;
-        
-        if(degree1>degree2 && which){
-        	god.sendData(loneLed[0],loneLed[1],loneLed[2]);
-        	which =false;
-       	}
-        else if(degree2>=degree1 && !which){
-        	god.sendData(0.0,0.0,0.0);
+        usleep(1000*10);
+        if(degree1>degree2 && !which){					// if degree1 is bigger hat is looking to obj
+        	headOrObj.sendHorO("obj");
         	which =true;
+       	}
+        else if(degree2>=degree1 && which){
+        	headOrObj.sendHorO("head");
+        	which =false;
         }
     }
 //	pthread_join(socket_thread, NULL);

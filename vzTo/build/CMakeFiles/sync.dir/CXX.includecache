@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tarik/vzTo/icub-pusher/vzTo/sync.cpp
+/home/tarik/icub-pusher/vzTo/sync.cpp
 yarp/os/all.h
 -
 stdio.h

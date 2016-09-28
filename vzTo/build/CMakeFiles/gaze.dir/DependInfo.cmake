@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tarik/vzTo/icub-pusher/vzTo/gaze.cpp" "/home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles/gaze.dir/gaze.cpp.o"
-  "/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp" "/home/tarik/vzTo/icub-pusher/vzTo/build/CMakeFiles/gaze.dir/home/tarik/vzTo/icub-pusher/class/ObjPosClient.cpp.o"
+  "/home/tarik/icub-pusher/vzTo/gaze.cpp" "/home/tarik/icub-pusher/vzTo/build/CMakeFiles/gaze.dir/gaze.cpp.o"
+  "/home/tarik/icub-pusher/class/NewObjPosClient.cpp" "/home/tarik/icub-pusher/vzTo/build/CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o"
+  "/home/tarik/icub-pusher/class/ObjPosClient.cpp" "/home/tarik/icub-pusher/vzTo/build/CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
