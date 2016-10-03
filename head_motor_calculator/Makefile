@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/baskin/icub-friends/head_motor_calculator
+CMAKE_SOURCE_DIR = /home/baskin/icub-friends/icub-pusher/head_motor_calculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/baskin/icub-friends/head_motor_calculator
+CMAKE_BINARY_DIR = /home/baskin/icub-friends/icub-pusher/head_motor_calculator
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/baskin/icub-friends/head_motor_calculator/CMakeFiles /home/baskin/icub-friends/head_motor_calculator/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/baskin/icub-friends/head_motor_calculator/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,19 +130,19 @@ head_motor_calculator.s:
 .PHONY : head_motor_calculator.s
 
 # target to build an object file
-home/baskin/icub-friends/class/ObjPosServer.o:
-	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/class/ObjPosServer.o
-.PHONY : home/baskin/icub-friends/class/ObjPosServer.o
+home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o:
+	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o
+.PHONY : home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o
 
 # target to preprocess a source file
-home/baskin/icub-friends/class/ObjPosServer.i:
-	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/class/ObjPosServer.i
-.PHONY : home/baskin/icub-friends/class/ObjPosServer.i
+home/baskin/icub-friends/icub-pusher/class/ObjPosServer.i:
+	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.i
+.PHONY : home/baskin/icub-friends/icub-pusher/class/ObjPosServer.i
 
 # target to generate assembly for a file
-home/baskin/icub-friends/class/ObjPosServer.s:
-	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/class/ObjPosServer.s
-.PHONY : home/baskin/icub-friends/class/ObjPosServer.s
+home/baskin/icub-friends/icub-pusher/class/ObjPosServer.s:
+	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.s
+.PHONY : home/baskin/icub-friends/icub-pusher/class/ObjPosServer.s
 
 # Help Target
 help:
@@ -156,9 +156,9 @@ help:
 	@echo "... head_motor_calculator.o"
 	@echo "... head_motor_calculator.i"
 	@echo "... head_motor_calculator.s"
-	@echo "... home/baskin/icub-friends/class/ObjPosServer.o"
-	@echo "... home/baskin/icub-friends/class/ObjPosServer.i"
-	@echo "... home/baskin/icub-friends/class/ObjPosServer.s"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/ObjPosServer.i"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/ObjPosServer.s"
 .PHONY : help
 
 

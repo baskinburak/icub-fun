@@ -149,7 +149,7 @@ int main(int argc, char *argv[]) {
 	yarp.connect("/vzPout",outPort.getName());
 	
 	while (true) {
-	        usleep(1000*10);
+	        usleep(1000*100);
         yarp::os::Bottle *input =outPort.read();
         if (input!=NULL) {
             yarp::os::Bottle& output = outPort.prepare();

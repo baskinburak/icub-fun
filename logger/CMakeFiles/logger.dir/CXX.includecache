@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/fatih/Desktop/icub-pusher/logger/logger.cpp
+/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.cpp
+YarpPortReader.h
+/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.h
+
+/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.h
+yarp/os/all.h
+-
+yarp/sig/all.h
+-
+yarp/dev/all.h
+-
+vector
+-
+string
+-
+
+/home/baskin/icub-friends/icub-pusher/logger/logger.cpp
 yarp/os/all.h
 -
 yarp/sig/all.h
@@ -16,5 +32,25 @@ yarp/dev/all.h
 string
 -
 sys/time.h
+-
+pthread.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+iostream
+-
+cstdio
+-
+../class/YarpPortReader.h
+/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.h
+fstream
 -
 

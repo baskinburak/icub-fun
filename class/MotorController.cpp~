@@ -32,7 +32,6 @@ MotorController::MotorController(std::string robot_name, std::string robot_part,
 	}
 
 	pos->getAxes(&(this->jnts));
-	std::cout << "this->jnts: " << this->jnts << std::endl;
 
 	yarp::sig::Vector tmp;
 	tmp.resize(this->jnts);

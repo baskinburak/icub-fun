@@ -1,4 +1,5 @@
 #include "MotorController.h"
+#include <iostream>
 
 MotorController::MotorController(std::string robot_name, std::string robot_part, int ref_acc, int ref_speed) {
 	if(robot_name != "icub" && robot_name != "icubSim") {

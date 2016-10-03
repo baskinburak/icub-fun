@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/logger.dir/logger.o"
+  "CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o"
   "logger.pdb"
   "logger"
 )

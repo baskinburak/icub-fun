@@ -4,8 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/baskin/icub-friends/head_motor_calculator/head_motor_calculator.cpp" "/home/baskin/icub-friends/head_motor_calculator/CMakeFiles/head_motor_calculator.dir/head_motor_calculator.o"
-  "/home/baskin/icub-friends/class/ObjPosServer.cpp" "/home/baskin/icub-friends/head_motor_calculator/CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/class/ObjPosServer.o"
+  "/home/baskin/icub-friends/icub-pusher/head_motor_calculator/head_motor_calculator.cpp" "/home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles/head_motor_calculator.dir/head_motor_calculator.o"
+  "/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.cpp" "/home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

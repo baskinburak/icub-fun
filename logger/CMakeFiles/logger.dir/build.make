@@ -34,11 +34,14 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fatih/Desktop/icub-pusher/logger
+CMAKE_SOURCE_DIR = /home/baskin/icub-friends/icub-pusher/logger
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fatih/Desktop/icub-pusher/logger
+CMAKE_BINARY_DIR = /home/baskin/icub-friends/icub-pusher/logger
 
 # Include any dependencies generated for this target.
 include CMakeFiles/logger.dir/depend.make
@@ -51,17 +54,17 @@ include CMakeFiles/logger.dir/flags.make
 
 CMakeFiles/logger.dir/logger.o: CMakeFiles/logger.dir/flags.make
 CMakeFiles/logger.dir/logger.o: logger.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/fatih/Desktop/icub-pusher/logger/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/baskin/icub-friends/icub-pusher/logger/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/logger.dir/logger.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/logger.dir/logger.o -c /home/fatih/Desktop/icub-pusher/logger/logger.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/logger.dir/logger.o -c /home/baskin/icub-friends/icub-pusher/logger/logger.cpp
 
 CMakeFiles/logger.dir/logger.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/logger.dir/logger.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/fatih/Desktop/icub-pusher/logger/logger.cpp > CMakeFiles/logger.dir/logger.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/baskin/icub-friends/icub-pusher/logger/logger.cpp > CMakeFiles/logger.dir/logger.i
 
 CMakeFiles/logger.dir/logger.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/logger.dir/logger.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/fatih/Desktop/icub-pusher/logger/logger.cpp -o CMakeFiles/logger.dir/logger.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/baskin/icub-friends/icub-pusher/logger/logger.cpp -o CMakeFiles/logger.dir/logger.s
 
 CMakeFiles/logger.dir/logger.o.requires:
 .PHONY : CMakeFiles/logger.dir/logger.o.requires
@@ -72,14 +75,39 @@ CMakeFiles/logger.dir/logger.o.provides: CMakeFiles/logger.dir/logger.o.requires
 
 CMakeFiles/logger.dir/logger.o.provides.build: CMakeFiles/logger.dir/logger.o
 
+CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o: CMakeFiles/logger.dir/flags.make
+CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o: /home/baskin/icub-friends/icub-pusher/class/YarpPortReader.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/baskin/icub-friends/icub-pusher/logger/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o -c /home/baskin/icub-friends/icub-pusher/class/YarpPortReader.cpp
+
+CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/baskin/icub-friends/icub-pusher/class/YarpPortReader.cpp > CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.i
+
+CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/baskin/icub-friends/icub-pusher/class/YarpPortReader.cpp -o CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.s
+
+CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o.requires:
+.PHONY : CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o.requires
+
+CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o.provides: CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o.requires
+	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o.provides.build
+.PHONY : CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o.provides
+
+CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o.provides.build: CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o
+
 # Object files for target logger
 logger_OBJECTS = \
-"CMakeFiles/logger.dir/logger.o"
+"CMakeFiles/logger.dir/logger.o" \
+"CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o"
 
 # External object files for target logger
 logger_EXTERNAL_OBJECTS =
 
 logger: CMakeFiles/logger.dir/logger.o
+logger: CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o
 logger: CMakeFiles/logger.dir/build.make
 logger: /usr/lib/x86_64-linux-gnu/libYARP_OS.so.2.3.66
 logger: /usr/lib/x86_64-linux-gnu/libYARP_sig.so.2.3.66
@@ -98,6 +126,7 @@ CMakeFiles/logger.dir/build: logger
 .PHONY : CMakeFiles/logger.dir/build
 
 CMakeFiles/logger.dir/requires: CMakeFiles/logger.dir/logger.o.requires
+CMakeFiles/logger.dir/requires: CMakeFiles/logger.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o.requires
 .PHONY : CMakeFiles/logger.dir/requires
 
 CMakeFiles/logger.dir/clean:
@@ -105,6 +134,6 @@ CMakeFiles/logger.dir/clean:
 .PHONY : CMakeFiles/logger.dir/clean
 
 CMakeFiles/logger.dir/depend:
-	cd /home/fatih/Desktop/icub-pusher/logger && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fatih/Desktop/icub-pusher/logger /home/fatih/Desktop/icub-pusher/logger /home/fatih/Desktop/icub-pusher/logger /home/fatih/Desktop/icub-pusher/logger /home/fatih/Desktop/icub-pusher/logger/CMakeFiles/logger.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/baskin/icub-friends/icub-pusher/logger && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/baskin/icub-friends/icub-pusher/logger /home/baskin/icub-friends/icub-pusher/logger /home/baskin/icub-friends/icub-pusher/logger /home/baskin/icub-friends/icub-pusher/logger /home/baskin/icub-friends/icub-pusher/logger/CMakeFiles/logger.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/logger.dir/depend
 
