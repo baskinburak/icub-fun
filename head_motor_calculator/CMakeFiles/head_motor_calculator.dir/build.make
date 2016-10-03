@@ -98,16 +98,41 @@ CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/
 
 CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o.provides.build: CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o
 
+CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o: CMakeFiles/head_motor_calculator.dir/flags.make
+CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o: /home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o -c /home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.cpp
+
+CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.cpp > CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.i
+
+CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.cpp -o CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.s
+
+CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o.requires:
+.PHONY : CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o.requires
+
+CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o.provides: CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o.requires
+	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o.provides.build
+.PHONY : CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o.provides
+
+CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o.provides.build: CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o
+
 # Object files for target head_motor_calculator
 head_motor_calculator_OBJECTS = \
 "CMakeFiles/head_motor_calculator.dir/head_motor_calculator.o" \
-"CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o"
+"CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o" \
+"CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o"
 
 # External object files for target head_motor_calculator
 head_motor_calculator_EXTERNAL_OBJECTS =
 
 head_motor_calculator: CMakeFiles/head_motor_calculator.dir/head_motor_calculator.o
 head_motor_calculator: CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o
+head_motor_calculator: CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o
 head_motor_calculator: CMakeFiles/head_motor_calculator.dir/build.make
 head_motor_calculator: /usr/lib/x86_64-linux-gnu/libYARP_OS.so.2.3.66
 head_motor_calculator: /usr/lib/x86_64-linux-gnu/libYARP_sig.so.2.3.66
@@ -127,6 +152,7 @@ CMakeFiles/head_motor_calculator.dir/build: head_motor_calculator
 
 CMakeFiles/head_motor_calculator.dir/requires: CMakeFiles/head_motor_calculator.dir/head_motor_calculator.o.requires
 CMakeFiles/head_motor_calculator.dir/requires: CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o.requires
+CMakeFiles/head_motor_calculator.dir/requires: CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o.requires
 .PHONY : CMakeFiles/head_motor_calculator.dir/requires
 
 CMakeFiles/head_motor_calculator.dir/clean:

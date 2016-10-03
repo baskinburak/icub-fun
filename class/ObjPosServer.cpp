@@ -85,6 +85,7 @@ bool ObjPosServer::threadInit() {
 
 void ObjPosServer::threadRelease() {
 	std::cout << "ObjPosServer release..." << std::endl;
+	close(this->sockfd);
 }
 
 std::vector<double> ObjPosServer::getObjCoordinates() {

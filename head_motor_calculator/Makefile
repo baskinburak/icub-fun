@@ -130,6 +130,21 @@ head_motor_calculator.s:
 .PHONY : head_motor_calculator.s
 
 # target to build an object file
+home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o:
+	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o
+.PHONY : home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o
+
+# target to preprocess a source file
+home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.i:
+	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.i
+.PHONY : home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.i
+
+# target to generate assembly for a file
+home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.s:
+	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.s
+.PHONY : home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.s
+
+# target to build an object file
 home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o:
 	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o
 .PHONY : home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o
@@ -156,6 +171,9 @@ help:
 	@echo "... head_motor_calculator.o"
 	@echo "... head_motor_calculator.i"
 	@echo "... head_motor_calculator.s"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.i"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.s"
 	@echo "... home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o"
 	@echo "... home/baskin/icub-friends/icub-pusher/class/ObjPosServer.i"
 	@echo "... home/baskin/icub-friends/icub-pusher/class/ObjPosServer.s"

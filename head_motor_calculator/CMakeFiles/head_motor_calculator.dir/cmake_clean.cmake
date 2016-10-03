@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/head_motor_calculator.dir/head_motor_calculator.o"
   "CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.o"
+  "CMakeFiles/head_motor_calculator.dir/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.o"
   "head_motor_calculator.pdb"
   "head_motor_calculator"
 )
