@@ -28,6 +28,8 @@ NewObjPosClient obj2;
 NewObjPosClient obj3;
 NewObjPosClient handChose;
 NewObjPosClient headChose;
+NewObjPosClient gaze1;
+NewObjPosClient gaze2;
 vector< vector<double> > onTable(3);
 vector< vector<double> > hatLeds(3);
 vector< vector<double> > gazePoints(3);
@@ -40,6 +42,8 @@ vector<double> degrees(4);
 vector< vector<double> > handToObj;
 vector< vector<double> > vHold; //created vHold; // 00 is hat1 // 01 icub // 02 led1 // 03 led2 // 04 led 3 // 05 gaze1 // 06 geze2 //07 gaze3
 void filler(){
+	gaze1.setHost(ip);
+	gaze2.setHost(ip);
 	obj1.setHost(ip);
 	obj2.setHost(ip);
 	obj3.setHost(ip);
@@ -50,6 +54,8 @@ void filler(){
 	obj3.setPort(15003);
 	handChose.setPort(15005);
 	headChose.setPort(15006);
+	gaze1.setPort(15007);
+	gaze2.setPort(15008);
 	for(int i=0;i<7;i++){
 		vector<double> temp(3);
 		for(int j = 0;j<3;j++){
@@ -397,6 +403,8 @@ int main(int argc, char *argv[]) {
            		obj1.sendData(onTable[0][0],onTable[0][1],onTable[0][2]);
            		obj2.sendData(onTable[1][0],onTable[1][1],onTable[1][2]);
            		obj3.sendData(onTable[2][0],onTable[2][1],onTable[2][2]);
+           		gaze1.sendData(gazePoints[0][0],gazePoints[0][1],gazePoints[0][2]);
+           		gaze2.sendData(gazePoints[1][0],gazePoints[1][1],gazePoints[1][2]);
            		updatevHold();
            		handlevHold();
            		handVec();
