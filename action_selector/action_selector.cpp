@@ -28,7 +28,7 @@ void arm_move(MotorController* sim, MotorController* icub) {
 	vect[13]=10.0002;
 	vect[14]=10.0002;
 	vect[15]=10.0002;
-	
+	sim->sendCommand(vect);
 	icub->sendCommand(vect);sleep(2);
 	
 	vect[0]=-32.5484;

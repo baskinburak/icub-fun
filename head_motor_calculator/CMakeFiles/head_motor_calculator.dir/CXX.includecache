@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.cpp
+MotorCommandGenerator.h
+/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.h
+
+/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.h
+ObjPosServer.h
+/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.h
+yarp/os/all.h
+-
+yarp/sig/all.h
+-
+yarp/dev/all.h
+-
+vector
+-
+cmath
+-
+unistd.h
+-
+
 /home/baskin/icub-friends/icub-pusher/class/ObjPosServer.cpp
 ObjPosServer.h
 /home/baskin/icub-friends/icub-pusher/class/ObjPosServer.h
@@ -47,4 +67,6 @@ yarp/dev/all.h
 -
 cmath
 -
+../class/MotorCommandGenerator.h
+/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.h
 

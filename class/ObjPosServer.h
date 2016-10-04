@@ -3,7 +3,8 @@
 #include <yarp/dev/all.h>
 #include <iostream>
 #include <vector>
-
+#ifndef OBJ_POS_SERVER
+#define OBJ_POS_SERVER
 class ObjPosServer : public yarp::os::Thread {
 	private:
 		double obj_x, obj_y, obj_z;
@@ -22,3 +23,4 @@ class ObjPosServer : public yarp::os::Thread {
 		void threadRelease();
 		std::vector<double> getObjCoordinates();
 };
+#endif

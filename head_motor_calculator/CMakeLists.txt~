@@ -7,4 +7,4 @@ FIND_PACKAGE(YARP REQUIRED)
 INCLUDE_DIRECTORIES(${YARP_INCLUDE_DIRS})
 ADD_EXECUTABLE(head_motor_calculator head_motor_calculator.cpp ../class/ObjPosServer.cpp)
 # we now add the YARP libraries to our project.
-TARGET_LINK_LIBRARIES(head_turn ${YARP_LIBRARIES})
+TARGET_LINK_LIBRARIES(head_motor_calculator ${YARP_LIBRARIES})

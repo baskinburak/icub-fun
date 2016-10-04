@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/baskin/icub-friends/icub-pusher/head_motor_calculator
 CMakeFiles/head_motor_calculator.dir/all:
 	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/depend
 	$(MAKE) -f CMakeFiles/head_motor_calculator.dir/build.make CMakeFiles/head_motor_calculator.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles  1 2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles  1 2 3
 	@echo "Built target head_motor_calculator"
 .PHONY : CMakeFiles/head_motor_calculator.dir/all
 
@@ -72,7 +72,7 @@ all: CMakeFiles/head_motor_calculator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/head_motor_calculator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/head_motor_calculator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/baskin/icub-friends/icub-pusher/head_motor_calculator/CMakeFiles 0
 .PHONY : CMakeFiles/head_motor_calculator.dir/rule

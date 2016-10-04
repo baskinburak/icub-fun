@@ -28,7 +28,7 @@ void arm_move(MotorController* sim, MotorController* icub) {
 	vect[13]=10.0002;
 	vect[14]=10.0002;
 	vect[15]=10.0002;
-	
+	sim->sendCommand(vect);
 	icub->sendCommand(vect);sleep(2);
 	
 	vect[0]=-32.5484;
@@ -69,65 +69,6 @@ void arm_move(MotorController* sim, MotorController* icub) {
 	
 	icub->sendCommand(vect);
 	
-	/*yarp::os::Property option;
-
-	option.put("device","cartesiancontrollerclient");
-	option.put("remote","/icubSim/cartesianController/right_arm");
-	option.put("local","/client/right_arm");
-
-	yarp::dev::PolyDriver clientCartCtrl(option);
-	yarp::dev::ICartesianControl *icart=NULL;
-	yarp::dev::IPositionControl *ipos=NULL;
-	if (clientCartCtrl.isValid()) {
- 	 	 clientCartCtrl.view(icart);
- 	 	 clientCartCtrl.view(ipos);
-
-	}
-	yarp::sig::Vector oy(4);
-	oy[0]=0.01; oy[1]=1.0; oy[2]=0.01; oy[3]=+M_PI/2.0;
-	yarp::sig::Vector xd(3),xdhat,odhat,resx,reso;
-	xd[0]=-0.29;
-	xd[1]=0.40;
-	xd[2]=-0.19;
-	icart->goToPose(xd,oy,1.0);*/
-	/*icart->askForPose(xd,od,xdhat,odhat,conf);
-	for(int i =0;i<conf.size();i++)
-		cout<<conf[i] << " ";
-	cout<< endl;*/
-	/*sleep(2);
-	icart->getPose(resx,reso,NULL);
-	std::cout<< "phase1 done" << std::endl;
-	std::cout << "Resulting pos x: "<< resx[0] << "  y: " << resx[1] << "  z: " << resx[2] << std::endl;
-	sleep(5);
-	
-	
-	xd[0]=-0.3;
-	xd[1]=0.23;
-	xd[2]=-0.015;
-	icart->goToPose(xd,oy,1.0);*/
-	/*icart->askForPose(xd,od,xdhat,odhat,conf);
-	/*for(int i =0;i<conf.size();i++)
-		cout<<conf[i] << " ";
-	cout<< endl;*/
-	/*sleep(2);
-	icart->getPose(resx,reso,NULL);
-	std::cout<< "phase2 done" << std::endl;
-	std::cout << "Resulting pos x: "<< resx[0] << "  y: " << resx[1] << "  z: " << resx[2] << std::endl;
-	sleep(5);
-	
-	xd[0]=-0.3;
-	xd[1]=0.02;
-	xd[2]=-0.015;
-	icart->goToPose(xd,oy,1.0);
-	/*icart->askForPose(xd,od,xdhat,odhat,conf);
-	/*for(int i =0;i<conf.size();i++)
-		cout<<conf[i] << " ";
-	cout<< endl;*/
-	/*sleep(2);
-	icart->getPose(resx,reso,NULL);
-	std::cout<< "phase3 done" << std::endl;
-	std::cout << "Resulting pos x: "<< resx[0] << "  y: " << resx[1] << "  z: " << resx[2] << std::endl;
-	sleep(5);*/
 }
 
 int main() {
