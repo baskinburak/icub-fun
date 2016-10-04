@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ObjData
+
+# Build rule for target.
+ObjData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ObjData
+.PHONY : ObjData
+
+# fast build rule for target.
+ObjData/fast:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/build
+.PHONY : ObjData/fast
+
+#=============================================================================
 # Target rules for targets named gaze
 
 # Build rule for target.
@@ -150,6 +163,19 @@ gazeCalculate/fast:
 .PHONY : gazeCalculate/fast
 
 #=============================================================================
+# Target rules for targets named mGaze
+
+# Build rule for target.
+mGaze: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mGaze
+.PHONY : mGaze
+
+# fast build rule for target.
+mGaze/fast:
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/build
+.PHONY : mGaze/fast
+
+#=============================================================================
 # Target rules for targets named vzMultiLed
 
 # Build rule for target.
@@ -174,6 +200,33 @@ sync: cmake_check_build_system
 sync/fast:
 	$(MAKE) -f CMakeFiles/sync.dir/build.make CMakeFiles/sync.dir/build
 .PHONY : sync/fast
+
+ObjData.o: ObjData.cpp.o
+
+.PHONY : ObjData.o
+
+# target to build an object file
+ObjData.cpp.o:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/ObjData.cpp.o
+.PHONY : ObjData.cpp.o
+
+ObjData.i: ObjData.cpp.i
+
+.PHONY : ObjData.i
+
+# target to preprocess a source file
+ObjData.cpp.i:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/ObjData.cpp.i
+.PHONY : ObjData.cpp.i
+
+ObjData.s: ObjData.cpp.s
+
+.PHONY : ObjData.s
+
+# target to generate assembly for a file
+ObjData.cpp.s:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/ObjData.cpp.s
+.PHONY : ObjData.cpp.s
 
 gaze.o: gaze.cpp.o
 
@@ -235,7 +288,9 @@ home/tarik/icub-pusher/class/NewObjPosClient.o: home/tarik/icub-pusher/class/New
 
 # target to build an object file
 home/tarik/icub-pusher/class/NewObjPosClient.cpp.o:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
 	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
 .PHONY : home/tarik/icub-pusher/class/NewObjPosClient.cpp.o
 
 home/tarik/icub-pusher/class/NewObjPosClient.i: home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
@@ -244,7 +299,9 @@ home/tarik/icub-pusher/class/NewObjPosClient.i: home/tarik/icub-pusher/class/New
 
 # target to preprocess a source file
 home/tarik/icub-pusher/class/NewObjPosClient.cpp.i:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
 	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
 .PHONY : home/tarik/icub-pusher/class/NewObjPosClient.cpp.i
 
 home/tarik/icub-pusher/class/NewObjPosClient.s: home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
@@ -253,7 +310,9 @@ home/tarik/icub-pusher/class/NewObjPosClient.s: home/tarik/icub-pusher/class/New
 
 # target to generate assembly for a file
 home/tarik/icub-pusher/class/NewObjPosClient.cpp.s:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
 	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
 .PHONY : home/tarik/icub-pusher/class/NewObjPosClient.cpp.s
 
 home/tarik/icub-pusher/class/ObjPosClient.o: home/tarik/icub-pusher/class/ObjPosClient.cpp.o
@@ -262,7 +321,9 @@ home/tarik/icub-pusher/class/ObjPosClient.o: home/tarik/icub-pusher/class/ObjPos
 
 # target to build an object file
 home/tarik/icub-pusher/class/ObjPosClient.cpp.o:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o
 	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.o
 .PHONY : home/tarik/icub-pusher/class/ObjPosClient.cpp.o
 
 home/tarik/icub-pusher/class/ObjPosClient.i: home/tarik/icub-pusher/class/ObjPosClient.cpp.i
@@ -271,7 +332,9 @@ home/tarik/icub-pusher/class/ObjPosClient.i: home/tarik/icub-pusher/class/ObjPos
 
 # target to preprocess a source file
 home/tarik/icub-pusher/class/ObjPosClient.cpp.i:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.i
 	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.i
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.i
 .PHONY : home/tarik/icub-pusher/class/ObjPosClient.cpp.i
 
 home/tarik/icub-pusher/class/ObjPosClient.s: home/tarik/icub-pusher/class/ObjPosClient.cpp.s
@@ -280,8 +343,37 @@ home/tarik/icub-pusher/class/ObjPosClient.s: home/tarik/icub-pusher/class/ObjPos
 
 # target to generate assembly for a file
 home/tarik/icub-pusher/class/ObjPosClient.cpp.s:
+	$(MAKE) -f CMakeFiles/ObjData.dir/build.make CMakeFiles/ObjData.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.s
 	$(MAKE) -f CMakeFiles/gaze.dir/build.make CMakeFiles/gaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.s
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/home/tarik/icub-pusher/class/ObjPosClient.cpp.s
 .PHONY : home/tarik/icub-pusher/class/ObjPosClient.cpp.s
+
+mGaze.o: mGaze.cpp.o
+
+.PHONY : mGaze.o
+
+# target to build an object file
+mGaze.cpp.o:
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/mGaze.cpp.o
+.PHONY : mGaze.cpp.o
+
+mGaze.i: mGaze.cpp.i
+
+.PHONY : mGaze.i
+
+# target to preprocess a source file
+mGaze.cpp.i:
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/mGaze.cpp.i
+.PHONY : mGaze.cpp.i
+
+mGaze.s: mGaze.cpp.s
+
+.PHONY : mGaze.s
+
+# target to generate assembly for a file
+mGaze.cpp.s:
+	$(MAKE) -f CMakeFiles/mGaze.dir/build.make CMakeFiles/mGaze.dir/mGaze.cpp.s
+.PHONY : mGaze.cpp.s
 
 sync.o: sync.cpp.o
 
@@ -371,12 +463,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... ObjData"
 	@echo "... rebuild_cache"
 	@echo "... gaze"
 	@echo "... vzOneLed"
 	@echo "... gazeCalculate"
+	@echo "... mGaze"
 	@echo "... vzMultiLed"
 	@echo "... sync"
+	@echo "... ObjData.o"
+	@echo "... ObjData.i"
+	@echo "... ObjData.s"
 	@echo "... gaze.o"
 	@echo "... gaze.i"
 	@echo "... gaze.s"
@@ -389,6 +486,9 @@ help:
 	@echo "... home/tarik/icub-pusher/class/ObjPosClient.o"
 	@echo "... home/tarik/icub-pusher/class/ObjPosClient.i"
 	@echo "... home/tarik/icub-pusher/class/ObjPosClient.s"
+	@echo "... mGaze.o"
+	@echo "... mGaze.i"
+	@echo "... mGaze.s"
 	@echo "... sync.o"
 	@echo "... sync.i"
 	@echo "... sync.s"

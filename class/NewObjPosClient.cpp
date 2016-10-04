@@ -7,10 +7,15 @@
 #include <netdb.h> 
 #include <sstream>
 
+
+NewObjPosClient::NewObjPosClient() {
+}
+
 NewObjPosClient::NewObjPosClient(std::string h, int p) {
 	this->host = host;
 	this->portno = p;
 }
+
 
 NewObjPosClient::NewObjPosClient(const char* h, int p) {
 	this->host = std::string(h);
@@ -25,14 +30,14 @@ void NewObjPosClient::sendData(double x, double y, double z) {
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
 	if (sockfd < 0) {
-		std::cout << "\033[0;31m[ObjPosClient] error opening socket\033[0m" << std::endl;
+		std::cout << "\033[0;31m[NewObjPosClient] error opening socket\033[0m" << std::endl;
 		return;
 	}
 
 	server = gethostbyname((this->host).c_str());
 
 	if (server == NULL) {
-		std::cout << "\033[0;31m[ObjPosClient] no such host\033[0m" << std::endl;
+		std::cout << "\033[0;31m[NewObjPosClient] no such host\033[0m" << std::endl;
 		return;
 	}
 
@@ -43,7 +48,7 @@ void NewObjPosClient::sendData(double x, double y, double z) {
 	serv_addr.sin_port = htons(portno);
 
 	if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) {
-		std::cout << "\033[0;31m[ObjPosClient] error connecting\033[0m" << std::endl;
+		std::cout << "\033[0;31m[NewObjPosClient] error connecting\033[0m" << std::endl;
 		return;
 	}
 	
@@ -69,14 +74,14 @@ void NewObjPosClient::sendHorO(char* HeadOrObj) {
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
 	if (sockfd < 0) {
-		std::cout << "\033[0;31m[ObjPosClient] error opening socket\033[0m" << std::endl;
+		std::cout << "\033[0;31m[NewObjPosClient] error opening socket\033[0m" << std::endl;
 		return;
 	}
 
 	server = gethostbyname((this->host).c_str());
 
 	if (server == NULL) {
-		std::cout << "\033[0;31m[ObjPosClient] no such host\033[0m" << std::endl;
+		std::cout << "\033[0;31m[NewObjPosClient] no such host\033[0m" << std::endl;
 		return;
 	}
 
@@ -87,7 +92,7 @@ void NewObjPosClient::sendHorO(char* HeadOrObj) {
 	serv_addr.sin_port = htons(portno);
 
 	if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) {
-		std::cout << "\033[0;31m[ObjPosClient] error connecting\033[0m" << std::endl;
+		std::cout << "\033[0;31m[NewObjPosClient] error connecting\033[0m" << std::endl;
 		return;
 	}
 	
@@ -104,4 +109,13 @@ void NewObjPosClient::sendHorO(char* HeadOrObj) {
 	}
 	
 	close(sockfd);
+}
+void NewObjPosClient::setHost(std::string newHost){
+	this->host = newHost;
+}
+void NewObjPosClient::setPort(int newPort){
+	this->portno = newPort;
+}
+int NewObjPosClient::getPort(){
+	return this->portno;
 }

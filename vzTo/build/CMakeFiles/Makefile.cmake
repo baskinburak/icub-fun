@@ -54,9 +54,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/ObjData.dir/DependInfo.cmake"
   "CMakeFiles/gaze.dir/DependInfo.cmake"
   "CMakeFiles/vzOneLed.dir/DependInfo.cmake"
   "CMakeFiles/gazeCalculate.dir/DependInfo.cmake"
+  "CMakeFiles/mGaze.dir/DependInfo.cmake"
   "CMakeFiles/vzMultiLed.dir/DependInfo.cmake"
   "CMakeFiles/sync.dir/DependInfo.cmake"
   )

@@ -17,53 +17,36 @@
 #define diff 0.00001 
 #define change 0.1
 using namespace std;
-vector<ObjPosClient> client_vec(24);
-stirng ip = "localhost";
+vector< NewObjPosClient > client_vec;
+string ip = "localhost";
 int one_two = 1;
+int port = 15000;
 vector<bool> active(24);
 vector< vector<double> > all_leds(24);
-for(int i= 0;i<24;i++) {
-	vector<double> temp(3);
-	for(int j = 0;j<3;j++){
-		temp[j] = 0.0;
+void filler(){
+	
+	for(int i= 0;i<24;i++) {
+		vector<double> temp(3);
+		for(int j = 0;j<3;j++){
+			temp[j] = 0.0;
+		}
+		all_leds[i] = temp;
+		active[i] = false;
+		if(one_two == 1) {
+			client_vec[i].setHost(ip);
+			client_vec[i].setPort(port+(one_two*100)+i);
+		}
+		else {
+			client_vec[i].setHost(ip);
+			client_vec[i].setPort(port+(one_two*100)+i-8);
+						
+		}
+		if(i == 8) {
+			one_two = 2;
+		}	
 	}
-	all_leds[i] = temp;
-	active[i] = false;
-	if(one_two == 1) {
-		ObjPosClient led(ip,14000+(one_two*100)+i);
-		client_vec[i] = led;
-	}
-	else {
-		ObjPosClient led(ip,14000+(one_two*100)+i-8);
-	}
-	if(i == 8) {
-		one_two = 2;
-	}	
 }
-/*
-ObjPosClient led1_2("localhost",14102);
-ObjPosClient led1_3("localhost",14103);
-ObjPosClient led1_4("localhost",14104);
-ObjPosClient led1_5("localhost",14105);
-ObjPosClient led1_6("localhost",14106);
-ObjPosClient led1_7("localhost",14107);
-ObjPosClient led1_8("localhost",14108);
-ObjPosClient led2_1("localhost",14201);
-ObjPosClient led2_2("localhost",14202);
-ObjPosClient led2_3("localhost",14203);
-ObjPosClient led2_4("localhost",14204);
-ObjPosClient led2_5("localhost",14205);
-ObjPosClient led2_6("localhost",14206);
-ObjPosClient led2_7("localhost",14207);
-ObjPosClient led2_8("localhost",14208);
-ObjPosClient led2_9("localhost",14209);
-ObjPosClient led2_10("localhost",14210);
-ObjPosClient led2_11("localhost",14211);
-ObjPosClient led2_12("localhost",14212);
-ObjPosClient led2_14("localhost",14214);
-ObjPosClient led2_15("localhost",14215);
 
-*/
 bool isEqual(double a,double b){
 	if(fabs(a-b)>diff)
 		return false;
@@ -81,6 +64,8 @@ bool isZero(vector<double> holder){
 }
 
 int main(int argc, char *argv[]) {
+client_vec.resize(24);
+	filler();
 	yarp::os::Network yarp;
 	yarp::os::BufferedPort<yarp::os::Bottle>  outPort;
 
@@ -111,7 +96,7 @@ int main(int argc, char *argv[]) {
 		            tcm = atoi(c2.substr(7,1).c_str());
 		            ledid = atoi(c2.substr(8,2).c_str());
 		            cout<<"tcm "<<tcm<<" ledid "<<ledid<<" ";
-		            active[(tcm-1)*8+i-1] = true;
+		            active[(tcm-1)*8+ledid] = true;
 		            helper++;
             	}
             	else if(helper == 4)
@@ -124,12 +109,13 @@ int main(int argc, char *argv[]) {
             		z = output.get(2).asDouble();
             		if(x == 0.0 && y==0.0 && z == 0.0);
             		else{
-		        		x = x+3.059691;
-						y = y-0.552323; 
-						z = z-9.433398;
+		        		x = x-0.0104737;
+						y = y-1.04349; 
+						z = z-5.82724;
 					}
-					cout<<"x: "<<x<<" y: "<<y <<" z: "<<z<<endl;
 					
+					cout<<"x: "<<x<<" y: "<<y <<" z: "<<z<<"   "<<(tcm-1)*8+ledid<<"   "<< client_vec[(tcm-1)*8+ledid].getPort() <<endl;
+					client_vec[(tcm-1)*8+ledid].sendData(x,y,z);
 					output.clear();
             	}
 		        else{
