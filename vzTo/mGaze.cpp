@@ -257,15 +257,15 @@ int main(int argc, char *argv[]) {
 	int newHand = 0;
 
 	icub.push_back(0.7507973);icub.push_back(-0.059904000);icub.push_back(0.79237);
-	onTable[0][0] = 3.8508463;		//leftmost x
-	onTable[0][1] = -2.93532;		//leftmost y
-	onTable[0][2] = -4.16355;		//leftmost z
-	onTable[1][0] = 4.0674063;		//middle x
-	onTable[1][1] = 0.130271000;	//middle y
-	onTable[1][2] = -3.48792;		//middle z
-	onTable[2][0] = 4.1345662999;	//rightmost x
-	onTable[2][1] = 2.64757999;		//rightmost y
-	onTable[2][2] = -3.66451;		//rightmost z
+	onTable[0][0] = 3.87694;		//leftmost x
+	onTable[0][1] = -2.93475;		//leftmost y
+	onTable[0][2] = -4.52904;		//leftmost z
+	onTable[1][0] = 3.96741;		//middle x
+	onTable[1][1] = -0.13212;	//middle y
+	onTable[1][2] = -4.44631;		//middle z
+	onTable[2][0] = 4.45853;	//rightmost x
+	onTable[2][1] = 2.56938;		//rightmost y
+	onTable[2][2] = -4.4719;		//rightmost z
 	gazePoints[0][0] = 4.3098763;	//leftgaze x
 	gazePoints[0][1] = -7.83328;	//leftgaze y
 	gazePoints[0][2] = 0.961610000;	//leftgaze z
@@ -359,7 +359,7 @@ int main(int argc, char *argv[]) {
 							alter =true;
 						}
 					}
-					else if(tcm == 1 && ledid == 1 && handled == false){
+					else if(tcm == 1 && ledid == 8 && handled == false){
 						if(isChanged(head[0],x) || isChanged(head[1],y) || isChanged(head[2],z)){
 							head[0] = x;
 							head[1] = y;

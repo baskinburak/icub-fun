@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.cpp
-MotorCommandGenerator.h
-/home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.h
-
 /home/baskin/icub-friends/icub-pusher/class/MotorCommandGenerator.h
 ObjPosServer.h
 /home/baskin/icub-friends/icub-pusher/class/ObjPosServer.h
@@ -24,22 +20,6 @@ vector
 cmath
 -
 unistd.h
--
-
-/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.cpp
-ObjPosServer.h
-/home/baskin/icub-friends/icub-pusher/class/ObjPosServer.h
-sstream
--
-string.h
--
-unistd.h
--
-sys/types.h
--
-sys/socket.h
--
-netinet/in.h
 -
 
 /home/baskin/icub-friends/icub-pusher/class/ObjPosServer.h

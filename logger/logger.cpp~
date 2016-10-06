@@ -254,6 +254,8 @@ class NetworkLogger : public yarp::os::Thread {
 
 int main(int argc, char* argv[]) {
 	if(argc!=2) {
+		std::cout << "need 1 folder argument" << std::endl;
+		return 0;
 	}
 	pthread_mutex_init(&print_mtx, NULL);
 	

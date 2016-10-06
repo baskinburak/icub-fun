@@ -114,6 +114,19 @@ action_selector/fast:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/build
 .PHONY : action_selector/fast
 
+#=============================================================================
+# Target rules for targets named action_selector_demo
+
+# Build rule for target.
+action_selector_demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 action_selector_demo
+.PHONY : action_selector_demo
+
+# fast build rule for target.
+action_selector_demo/fast:
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/build
+.PHONY : action_selector_demo/fast
+
 # target to build an object file
 action_selector.o:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/action_selector.o
@@ -130,49 +143,88 @@ action_selector.s:
 .PHONY : action_selector.s
 
 # target to build an object file
+action_selector_demo.o:
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/action_selector_demo.o
+.PHONY : action_selector_demo.o
+
+# target to preprocess a source file
+action_selector_demo.i:
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/action_selector_demo.i
+.PHONY : action_selector_demo.i
+
+# target to generate assembly for a file
+action_selector_demo.s:
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/action_selector_demo.s
+.PHONY : action_selector_demo.s
+
+# target to build an object file
 home/baskin/icub-friends/icub-pusher/class/MotorController.o:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/MotorController.o
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/MotorController.o
 .PHONY : home/baskin/icub-friends/icub-pusher/class/MotorController.o
 
 # target to preprocess a source file
 home/baskin/icub-friends/icub-pusher/class/MotorController.i:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/MotorController.i
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/MotorController.i
 .PHONY : home/baskin/icub-friends/icub-pusher/class/MotorController.i
 
 # target to generate assembly for a file
 home/baskin/icub-friends/icub-pusher/class/MotorController.s:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/MotorController.s
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/MotorController.s
 .PHONY : home/baskin/icub-friends/icub-pusher/class/MotorController.s
 
 # target to build an object file
 home/baskin/icub-friends/icub-pusher/class/StringServer.o:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/StringServer.o
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/StringServer.o
 .PHONY : home/baskin/icub-friends/icub-pusher/class/StringServer.o
 
 # target to preprocess a source file
 home/baskin/icub-friends/icub-pusher/class/StringServer.i:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/StringServer.i
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/StringServer.i
 .PHONY : home/baskin/icub-friends/icub-pusher/class/StringServer.i
 
 # target to generate assembly for a file
 home/baskin/icub-friends/icub-pusher/class/StringServer.s:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/StringServer.s
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/StringServer.s
 .PHONY : home/baskin/icub-friends/icub-pusher/class/StringServer.s
 
 # target to build an object file
 home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o
 .PHONY : home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o
 
 # target to preprocess a source file
 home/baskin/icub-friends/icub-pusher/class/YarpPortReader.i:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.i
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.i
 .PHONY : home/baskin/icub-friends/icub-pusher/class/YarpPortReader.i
 
 # target to generate assembly for a file
 home/baskin/icub-friends/icub-pusher/class/YarpPortReader.s:
 	$(MAKE) -f CMakeFiles/action_selector.dir/build.make CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.s
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.s
 .PHONY : home/baskin/icub-friends/icub-pusher/class/YarpPortReader.s
+
+# target to build an object file
+home/baskin/icub-friends/icub-pusher/class/face_controller.o:
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/face_controller.o
+.PHONY : home/baskin/icub-friends/icub-pusher/class/face_controller.o
+
+# target to preprocess a source file
+home/baskin/icub-friends/icub-pusher/class/face_controller.i:
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/face_controller.i
+.PHONY : home/baskin/icub-friends/icub-pusher/class/face_controller.i
+
+# target to generate assembly for a file
+home/baskin/icub-friends/icub-pusher/class/face_controller.s:
+	$(MAKE) -f CMakeFiles/action_selector_demo.dir/build.make CMakeFiles/action_selector_demo.dir/home/baskin/icub-friends/icub-pusher/class/face_controller.s
+.PHONY : home/baskin/icub-friends/icub-pusher/class/face_controller.s
 
 # Help Target
 help:
@@ -181,11 +233,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... action_selector"
+	@echo "... action_selector_demo"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... action_selector.o"
 	@echo "... action_selector.i"
 	@echo "... action_selector.s"
+	@echo "... action_selector_demo.o"
+	@echo "... action_selector_demo.i"
+	@echo "... action_selector_demo.s"
 	@echo "... home/baskin/icub-friends/icub-pusher/class/MotorController.o"
 	@echo "... home/baskin/icub-friends/icub-pusher/class/MotorController.i"
 	@echo "... home/baskin/icub-friends/icub-pusher/class/MotorController.s"
@@ -195,6 +251,9 @@ help:
 	@echo "... home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o"
 	@echo "... home/baskin/icub-friends/icub-pusher/class/YarpPortReader.i"
 	@echo "... home/baskin/icub-friends/icub-pusher/class/YarpPortReader.s"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/face_controller.o"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/face_controller.i"
+	@echo "... home/baskin/icub-friends/icub-pusher/class/face_controller.s"
 .PHONY : help
 
 
