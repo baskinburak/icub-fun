@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/fatih/Desktop/icub-pusher/action_selector/action_selector.cpp
+/home/baskin/icub-friends/icub-pusher/action_selector/action_selector.cpp
 iostream
 -
 yarp/os/all.h
@@ -16,17 +16,19 @@ yarp/sig/all.h
 yarp/dev/all.h
 -
 ../class/YarpPortReader.h
-/home/fatih/Desktop/icub-pusher/class/YarpPortReader.h
+/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.h
 vector
 -
 ../class/MotorController.h
-/home/fatih/Desktop/icub-pusher/class/MotorController.h
+/home/baskin/icub-friends/icub-pusher/class/MotorController.h
 gsl/gsl_math.h
 -
 unistd.h
 -
+../class/StringServer.h
+/home/baskin/icub-friends/icub-pusher/class/StringServer.h
 
-/home/fatih/Desktop/icub-pusher/class/MotorController.h
+/home/baskin/icub-friends/icub-pusher/class/MotorController.h
 string
 -
 yarp/os/all.h
@@ -38,7 +40,23 @@ yarp/dev/all.h
 vector
 -
 
-/home/fatih/Desktop/icub-pusher/class/YarpPortReader.h
+/home/baskin/icub-friends/icub-pusher/class/StringServer.h
+yarp/os/all.h
+-
+yarp/sig/all.h
+-
+yarp/dev/all.h
+-
+iostream
+-
+vector
+-
+string
+-
+pthread.h
+-
+
+/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.h
 yarp/os/all.h
 -
 yarp/sig/all.h

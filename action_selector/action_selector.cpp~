@@ -7,6 +7,7 @@
 #include "../class/MotorController.h"
 #include <gsl/gsl_math.h>
 #include <unistd.h>
+#include "../class/StringServer.h"
 
 void arm_move(MotorController* sim, MotorController* icub) {
 	
@@ -73,20 +74,27 @@ void arm_move(MotorController* sim, MotorController* icub) {
 
 int main() {
 	yarp::os::Network yarp;
-	YarpPortReader head_command("/icub_kovan/action_selector/human_head_motor_command");
-	YarpPortReader obj_command("/icub_kovan/action_selector/obj_head_motor_command");
-	YarpPortReader arm_command("/icub_kovan/action_selector/obj_arm_motor_command");
+	YarpPortReader obj1_command("/icub_kovan/action_selector/obj1_head_motor_command");
+	YarpPortReader obj2_command("/icub_kovan/action_selector/obj2_head_motor_command");
+	YarpPortReader obj3_command("/icub_kovan/action_selector/obj3_head_motor_command");
+	YarpPortReader gaze1_command("/icub_kovan/action_selector/gaze1_head_motor_command");
+	YarpPortReader gaze2_command("/icub_kovan/action_selector/gaze2_head_motor_command");
+	YarpPortReader human_command("/icub_kovan/action_selector/human_head_motor_command");
+	YarpPortReader hand_command("/icub_kovan/action_selector/hand_head_motor_command");
+	StringServer human_gaze_where(15006);
+	human_gaze_where.start();
+
+	StringServer hand_on_where(15005);
+	hand_on_where.start();
+	
 
 	bool icub_sim_on = false;
 
 	MotorController* sim_head_controller;
-	MotorController* sim_right_arm_controller;
 	MotorController* head_controller;
-	MotorController* right_arm_controller;
 
 	try {
 		sim_head_controller = new MotorController("icubSim", "head", 10, 10);
-		sim_right_arm_controller = new MotorController("icubSim", "right_arm", 10, 10);
 		icub_sim_on = true;
 		std::cout << "[SCC] Connected to icubSim" << std::endl;
 	} catch (std::string e) {
@@ -98,7 +106,6 @@ int main() {
 
 	try {
 		head_controller = new MotorController("icub", "head", 10, 10);
-		right_arm_controller = new MotorController("icub", "right_arm", 10, 10);
 		icub_on = true;
 		std::cout << "[SCC] Connected to icub" << std::endl;
 	} catch(std::string e) {
@@ -107,30 +114,98 @@ int main() {
 	}
 
 	while(true) {
-		std::vector<double> head_mc = head_command.getData();
-		std::vector<double> obj_mc = obj_command.getData();
-		std::vector<double> arm_mc = arm_command.getData();
-
+		std::vector<double> obj1_mc = obj1_command.getData();
+		std::vector<double> obj2_mc = obj2_command.getData();
+		std::vector<double> obj3_mc = obj3_command.getData();
+		std::vector<double> gaze1_mc = gaze1_command.getData();
+		std::vector<double> gaze2_mc = gaze2_command.getData();
+		std::vector<double> human_mc = human_command.getData();
+		std::vector<double> hand_mc = hand_command.getData();
+		std::string hand_where = hand_on_where.getString();
+		std::string head_where = human_gaze_where.getString();
+		std::vector<double> eight_mc;
+		std::vector<double> nine_mc;
+		
 
 		int action;
-		std::cout << "select action (1 - move arm, 2 - look at object, 3 - look at human head)" << std::endl;
-		std::cin >> action;
+		std::cin >> action; // 1 obj1, 2 obj2, 3 obj3, 4 gaze1, 5 gaze2, 6 human, 7 hand, 8 human gaze'e bak, 9 hand'in üstündekine bak
 
 		switch(action) {
 			case 1:
-				arm_move(sim_right_arm_controller, right_arm_controller);
+				if(icub_sim_on)
+					sim_head_controller->sendCommand(obj1_mc);
+				if(icub_on) 
+					head_controller->sendCommand(obj1_mc);
 				break;
 			case 2:
 				if(icub_sim_on)
-					sim_head_controller->sendCommand(obj_mc);
+					sim_head_controller->sendCommand(obj2_mc);
 				if(icub_on)
-					head_controller->sendCommand(obj_mc);
+					head_controller->sendCommand(obj2_mc);
 				break;
 			case 3:
 				if(icub_sim_on)
-					sim_head_controller->sendCommand(head_mc);
+					sim_head_controller->sendCommand(obj3_mc);
 				if(icub_on)
-					head_controller->sendCommand(head_mc);
+					head_controller->sendCommand(obj3_mc);
+				break;
+			case 4:
+				if(icub_sim_on)
+					sim_head_controller->sendCommand(gaze1_mc);
+				if(icub_on)
+					head_controller->sendCommand(gaze1_mc);
+				break;
+			case 5:
+				if(icub_sim_on)
+					sim_head_controller->sendCommand(gaze2_mc);
+				if(icub_on)
+					head_controller->sendCommand(gaze2_mc);
+				break;
+			case 6:
+				if(icub_sim_on)
+					sim_head_controller->sendCommand(human_mc);
+				if(icub_on)
+					head_controller->sendCommand(human_mc);
+				break;
+			case 7:
+				if(icub_sim_on)
+					sim_head_controller->sendCommand(hand_mc);
+				if(icub_on)
+					head_controller->sendCommand(hand_mc);
+				break;
+			case 8:
+				eight_mc = human_mc;
+				if(head_where == "obj1") {
+					eight_mc = obj1_mc;
+				} else if(head_where == "obj2") {
+					eight_mc = obj2_mc;
+				} else if(head_where == "obj3") {
+					eight_mc = obj3_mc;
+				} else if(head_where == "gaze1") {
+					eight_mc = gaze1_mc;
+				} else if(head_where == "gaze2") {
+					eight_mc = gaze2_mc;
+				} else if(head_where == "head") {
+					eight_mc = human_mc;
+				} 
+				if(icub_sim_on)
+					sim_head_controller->sendCommand(eight_mc);
+				if(icub_on)
+					head_controller->sendCommand(eight_mc);
+				break;
+			case 9:
+				nine_mc = human_mc;
+				if(hand_where == "obj1") {
+					nine_mc = obj1_mc;
+				} else if(hand_where == "obj2") {
+					nine_mc = obj2_mc;
+				} else if(hand_where == "obj3") {
+					nine_mc = obj3_mc;
+				}
+				if(icub_sim_on)
+					sim_head_controller->sendCommand(nine_mc);
+				if(icub_on)
+					head_controller->sendCommand(nine_mc);
 				break;
 		} 	
 	}

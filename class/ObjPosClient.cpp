@@ -33,6 +33,7 @@ void ObjPosClient::sendData(double x, double y, double z) {
 
 	if (server == NULL) {
 		std::cout << "\033[0;31m[ObjPosClient] no such host\033[0m" << std::endl;
+		close(sockfd);
 		return;
 	}
 
@@ -43,7 +44,8 @@ void ObjPosClient::sendData(double x, double y, double z) {
 	serv_addr.sin_port = htons(portno);
 
 	if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) {
-		std::cout << "\033[0;31m[ObjPosClient] error connecting\033[0m" << std::endl;
+		std::cout << "\033[0;31m[ObjPosClient] error connecting" << this->host << " " << this->portno << "\033[0m" << std::endl;
+		close(sockfd);
 		return;
 	}
 	

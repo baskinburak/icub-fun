@@ -20,7 +20,8 @@
 #define _USE_MATH_DEFINES
 using namespace std;
 vector< NewObjPosClient > client_vec;
-string ip = "localhost";
+string ip = "10.0.0.1";
+string ip2= "localhost";
 int one_two = 1;
 int port = 17000;
 NewObjPosClient obj1;
@@ -42,11 +43,11 @@ vector<double> degrees(4);
 vector< vector<double> > handToObj;
 vector< vector<double> > vHold; //created vHold; // 00 is hat1 // 01 icub // 02 led1 // 03 led2 // 04 led 3 // 05 gaze1 // 06 geze2 //07 gaze3
 void filler(){
-	gaze1.setHost(ip);
-	gaze2.setHost(ip);
-	obj1.setHost(ip);
-	obj2.setHost(ip);
-	obj3.setHost(ip);
+	gaze1.setHost(ip2);
+	gaze2.setHost(ip2);
+	obj1.setHost(ip2);
+	obj2.setHost(ip2);
+	obj3.setHost(ip2);
 	handChose.setHost(ip);
 	headChose.setHost(ip);
 	obj1.setPort(15001);
@@ -81,11 +82,11 @@ void filler(){
 			temp[j] = 0.0;
 		}
 		if(one_two == 1) {
-			client_vec[i].setHost(ip);
+			client_vec[i].setHost(ip2);
 			client_vec[i].setPort(port+(one_two*100)+i);
 		}
 		else {
-			client_vec[i].setHost(ip);
+			client_vec[i].setHost(ip2);
 			client_vec[i].setPort(port+(one_two*100)+i-8);
 						
 		}
@@ -283,7 +284,7 @@ int main(int argc, char *argv[]) {
 	}
 	yarp.connect("/vzPout",outPort.getName());
 	while (true) {
-
+		usleep(1000*1000*0.3);
         yarp::os::Bottle *input =outPort.read();
         if (input!=NULL) {
             yarp::os::Bottle& output = outPort.prepare();
@@ -299,7 +300,6 @@ int main(int argc, char *argv[]) {
 	        bool alter = false;
 	        broken[2] = false; ////////////////////////CHANGE IN CASE OF THREE LED AT HEAD
             for(int j = 1;j<input->size();j++){
-            	usleep(1000*1000*0.5);
             	if(helper == 0)
             	{
             		c2 = input->get((jumper*5)+1).asString();
@@ -415,13 +415,13 @@ int main(int argc, char *argv[]) {
            			oldHand = newHand;
            			switch(oldHand){
            				case 0:
-           					handChose.sendHorO((char *)"obj0");
+           					handChose.sendHorO((char *)"obj1");break;
            				case 1:
-           					handChose.sendHorO((char *)"obj1");
+           					handChose.sendHorO((char *)"obj2");break;
            				case 2:
-           					handChose.sendHorO((char *)"obj2");
+           					handChose.sendHorO((char *)"obj3");break;
            				default:
-           					handChose.sendHorO((char *)"noObj");
+           					handChose.sendHorO((char *)"noObj");break;
            			}
            		}
            		if(oldchosen!=newchosen){
@@ -429,17 +429,17 @@ int main(int argc, char *argv[]) {
            			oldchosen = newchosen;
 					switch(newchosen){
 						case 1:
-							headChose.sendHorO((char *)"head");
+							headChose.sendHorO((char *)"head");break;
 						case 2:
-							headChose.sendHorO((char *)"obj0");
+							headChose.sendHorO((char *)"obj1");break;
 						case 3:
-							headChose.sendHorO((char *)"obj1");							
+							headChose.sendHorO((char *)"obj2");break;						
 						case 4:
-							headChose.sendHorO((char *)"obj2");
+							headChose.sendHorO((char *)"obj3");break;
 						case 5:
-							headChose.sendHorO((char *)"gaze1");
+							headChose.sendHorO((char *)"gaze1");break;
 						case 6:
-							headChose.sendHorO((char *)"gaze2");
+							headChose.sendHorO((char *)"gaze2");break;
 					} 
            		}
            	}

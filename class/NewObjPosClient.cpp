@@ -38,6 +38,7 @@ void NewObjPosClient::sendData(double x, double y, double z) {
 
 	if (server == NULL) {
 		std::cout << "\033[0;31m[NewObjPosClient] no such host\033[0m" << std::endl;
+		close(sockfd);
 		return;
 	}
 
@@ -47,8 +48,13 @@ void NewObjPosClient::sendData(double x, double y, double z) {
 	memcpy((char *)&serv_addr.sin_addr.s_addr, (char *)server->h_addr, server->h_length);
 	serv_addr.sin_port = htons(portno);
 
+	int yes = 1;
+
+	setsockopt(sockfd, SOL_SOCKET, SO_REUSEPORT, &yes, sizeof(int));
+
 	if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) {
-		std::cout << "\033[0;31m[NewObjPosClient] error connecting\033[0m" << std::endl;
+		std::cout << "\033[0;31m[NewObjPosClient] error connecting " << this->host << " " << this->portno<<"\033[0m" << std::endl;
+		close(sockfd);
 		return;
 	}
 	
@@ -75,6 +81,7 @@ void NewObjPosClient::sendHorO(char* HeadOrObj) {
 
 	if (sockfd < 0) {
 		std::cout << "\033[0;31m[NewObjPosClient] error opening socket\033[0m" << std::endl;
+		close(sockfd);
 		return;
 	}
 
@@ -82,6 +89,7 @@ void NewObjPosClient::sendHorO(char* HeadOrObj) {
 
 	if (server == NULL) {
 		std::cout << "\033[0;31m[NewObjPosClient] no such host\033[0m" << std::endl;
+		close(sockfd);
 		return;
 	}
 
@@ -93,11 +101,12 @@ void NewObjPosClient::sendHorO(char* HeadOrObj) {
 
 	if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) {
 		std::cout << "\033[0;31m[NewObjPosClient] error connecting\033[0m" << std::endl;
+		close(sockfd);
 		return;
 	}
 	
 	std::stringstream ss;
-	ss << HeadOrObj << " ";
+	ss << HeadOrObj;
 
 	std::string str = ss.str();
 

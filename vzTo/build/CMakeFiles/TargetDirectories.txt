@@ -1,9 +1,7 @@
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/edit_cache.dir
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/ObjData.dir
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/rebuild_cache.dir
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/gaze.dir
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/vzOneLed.dir
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/gazeCalculate.dir
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/mGaze.dir
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/vzMultiLed.dir
-/home/tarik/icub-pusher/vzTo/build/CMakeFiles/sync.dir
+/home/baskin/icub-friends/icub-pusher/vzTo/build/CMakeFiles/ObjData.dir
+/home/baskin/icub-friends/icub-pusher/vzTo/build/CMakeFiles/gaze.dir
+/home/baskin/icub-friends/icub-pusher/vzTo/build/CMakeFiles/gazeCalculate.dir
+/home/baskin/icub-friends/icub-pusher/vzTo/build/CMakeFiles/mGaze.dir
+/home/baskin/icub-friends/icub-pusher/vzTo/build/CMakeFiles/sync.dir
+/home/baskin/icub-friends/icub-pusher/vzTo/build/CMakeFiles/vzMultiLed.dir
+/home/baskin/icub-friends/icub-pusher/vzTo/build/CMakeFiles/vzOneLed.dir

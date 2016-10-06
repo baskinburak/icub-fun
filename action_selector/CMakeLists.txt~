@@ -5,6 +5,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 FIND_PACKAGE(YARP REQUIRED)
 # add include directories
 INCLUDE_DIRECTORIES(${YARP_INCLUDE_DIRS})
-ADD_EXECUTABLE(action_selector action_selector.cpp ../class/YarpPortReader.cpp ../class/MotorController.cpp ../class/ObjPosClient.cpp)
+ADD_EXECUTABLE(action_selector action_selector.cpp ../class/YarpPortReader.cpp ../class/MotorController.cpp)
 # we now add the YARP libraries to our project.
 TARGET_LINK_LIBRARIES(action_selector ${YARP_LIBRARIES})

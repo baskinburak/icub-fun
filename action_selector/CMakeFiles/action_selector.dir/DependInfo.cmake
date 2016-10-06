@@ -4,9 +4,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/fatih/Desktop/icub-pusher/action_selector/action_selector.cpp" "/home/fatih/Desktop/icub-pusher/action_selector/CMakeFiles/action_selector.dir/action_selector.o"
-  "/home/fatih/Desktop/icub-pusher/class/MotorController.cpp" "/home/fatih/Desktop/icub-pusher/action_selector/CMakeFiles/action_selector.dir/home/fatih/Desktop/icub-pusher/class/MotorController.o"
-  "/home/fatih/Desktop/icub-pusher/class/YarpPortReader.cpp" "/home/fatih/Desktop/icub-pusher/action_selector/CMakeFiles/action_selector.dir/home/fatih/Desktop/icub-pusher/class/YarpPortReader.o"
+  "/home/baskin/icub-friends/icub-pusher/action_selector/action_selector.cpp" "/home/baskin/icub-friends/icub-pusher/action_selector/CMakeFiles/action_selector.dir/action_selector.o"
+  "/home/baskin/icub-friends/icub-pusher/class/MotorController.cpp" "/home/baskin/icub-friends/icub-pusher/action_selector/CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/MotorController.o"
+  "/home/baskin/icub-friends/icub-pusher/class/StringServer.cpp" "/home/baskin/icub-friends/icub-pusher/action_selector/CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/StringServer.o"
+  "/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.cpp" "/home/baskin/icub-friends/icub-pusher/action_selector/CMakeFiles/action_selector.dir/home/baskin/icub-friends/icub-pusher/class/YarpPortReader.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
