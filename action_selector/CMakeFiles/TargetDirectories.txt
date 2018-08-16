@@ -1,2 +1,0 @@
-/home/baskin/icub-friends/icub-pusher/action_selector/CMakeFiles/action_selector.dir
-/home/baskin/icub-friends/icub-pusher/action_selector/CMakeFiles/action_selector_demo.dir

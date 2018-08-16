@@ -1,1 +1,0 @@
-/home/fatih/Desktop/icub-pusher/cartesian_server/build/CMakeFiles/cartesian_server.dir
